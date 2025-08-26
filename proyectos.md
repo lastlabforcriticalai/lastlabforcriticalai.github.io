@@ -7,9 +7,7 @@
   Estado: en curso.  
 
 ## Nodo USFQ (Ecuador)
-- **Estancia de investigación en el IEAD–USFQ (2024–2025)**  
-  Consolidación de la visión del Lab como proyecto latinoamericano multinodal.  
+- **Estancia de investigación del director Horacio Correa Lucero en el IEAD–USFQ (2024–2025)**  
+  Allí se genera la idea de un laboratorio que promueva el pensamiento crítico en IA e impulsado gracias al apoyo de la idea por la codirectora Cheryl Martens.  
 
 ## Proyectos en red (en preparación)
-- Propuesta ERC / Horizon Europe sobre crítica de la IA y redes sociotécnicas.  
-- Cooperación internacional para la formación crítica en IA en América Latina.  
