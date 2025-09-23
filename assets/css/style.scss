@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Reemplaza el fondo del header de Cayman por tu imagen */
+.page-header {
+  background: #0a0a0a; /* fallback */
+  background-image: url("/assets/img/hero-lastlab.jpg") !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 400px;    
+  padding: 4rem 2rem;   
+}
+
+.project-name, .project-tagline {
+  text-shadow: 0 2px 6px rgba(0,0,0,.55);
+}
