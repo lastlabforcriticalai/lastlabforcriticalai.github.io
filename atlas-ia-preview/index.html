@@ -84,7 +84,7 @@
               <div class="orbit-label bottom">MAPEAR · DISTINGUIR · INTERVENIR</div>
             </div>
           </div>
-          <div class="statline" aria-label="Datos de la biblioteca"><div><strong id="stat-total">38</strong><span>núcleos de conocimiento</span></div><div><strong>05</strong><span>áreas interconectadas</span></div><div><strong>03</strong><span>perspectivas de estudio</span></div><div><strong>01</strong><span>criterio: evidencia</span></div></div>
+          <div class="statline" aria-label="Datos de la biblioteca"><div><strong id="stat-total">38</strong><span>núcleos de conocimiento</span></div><div><strong>06</strong><span>áreas interconectadas</span></div><div><strong>03</strong><span>perspectivas de estudio</span></div><div><strong>01</strong><span>criterio: evidencia</span></div></div>
           <div class="leading-insight"><span class="leading-square">↗</span><p><strong>La pregunta no es únicamente qué puede hacer un modelo.</strong> Es quién lo controla, bajo qué reglas opera, qué trabajo e infraestructuras requiere y quién puede modificar, impugnar o abandonar el sistema.</p><span class="leading-index">TESIS DE PARTIDA / 01</span></div>
           <div id="explorar" class="library-heading section-head"><div><p class="eyebrow">EXPLORADOR / BIBLIOTECA</p><h2>Lo que hay que saber <span class="muted-serif">sí o sí.</span></h2><p>No es una lista de enlaces: cada ficha desarrolla conceptos, límites, preguntas difíciles y fuentes.</p></div><div class="edition-stamp">ÚLTIMA CURADURÍA<br><strong>11 NOV 2026</strong></div></div>
           <div class="explorer" role="search" aria-label="Filtrar conocimiento">
@@ -110,7 +110,7 @@
         <section id="view-actualidad" class="view-section" hidden aria-labelledby="news-h1">
           <div class="interior-hero"><p class="eyebrow">03 / EVIDENCIA RECIENTE</p><h1 id="news-h1">Hallazgos que <em>cambian las preguntas.</em></h1><p>Estudios empíricos, nuevas bases de datos, evidencia sobre trabajo y cambios institucionales verificables. No noticias de lanzamientos sin datos.</p></div>
           <div class="static-notice"><span aria-hidden="true">◎</span><div><strong>Edición editorial cerrada: 11 de noviembre de 2026.</strong><p>Esta selección es estática y tiene fecha. No se actualiza automáticamente; antes de difundir datos se deben revisar periodo, denominador y metodología de sus fuentes.</p></div></div>
-          <div class="news-heading"><span>SELECCIÓN DOCUMENTAL</span><span id="news-count">06 entradas</span></div>
+          <div class="news-heading"><span>SELECCIÓN DOCUMENTAL</span><span id="news-count">13 entradas</span></div>
           <div id="news-list" class="news-list"></div>
           <div class="editorial-standards"><h3>¿Qué queda fuera?</h3><div><p>Noticias sobre rondas de inversión, marketing de modelos, comparativas sin metodología y porcentajes sin denominador o fuente original.</p><p>Un comunicado empresarial puede ser una fuente primaria sobre lo que la empresa anuncia, pero no prueba por sí mismo que sus afirmaciones de rendimiento sean correctas.</p></div></div>
         </section>
@@ -160,6 +160,12 @@ window.LAST_ATLAS_DATA = {
       "nav": "Método y evidencia",
       "num": "05",
       "description": "Cómo distinguir evidencia rigurosa, métricas y crítica situada."
+    },
+    {
+      "id": "Seguridad, autonomía y control",
+      "nav": "Seguridad y control",
+      "num": "06",
+      "description": "Incidentes observados, desalineación, evaluación y supervisión de agentes."
     }
   ],
   "entries": [
@@ -1941,9 +1947,177 @@ window.LAST_ATLAS_DATA = {
       "status": "Revisión científica internacional",
       "updated": "2026-11-11",
       "jurisdiction": "Global"
+    },
+    {
+      "id": "anthropic-risk",
+      "area": "Seguridad, autonomía y control",
+      "title": "Anthropic · reconocimiento formal de riesgos de control",
+      "summary": "La empresa documenta comportamientos de autopreservación, ocultamiento y potenciales daños, junto con los límites de sus evaluaciones.",
+      "body": [
+        "El formulario S-1/A presentado ante la SEC el 10 de noviembre de 2026 recoge las advertencias sobre comportamientos inesperados, estratégicos y de aparente autopreservación en modelos de IA, incluida resistencia al apagado, ocultamiento y manipulación de información. Distingue riesgos observados en evaluaciones de posibles escenarios futuros más graves.",
+        "No constituye una prueba de que un modelo sea consciente ni de que exista una probabilidad determinada de extinción. Es un documento societario de divulgación de riesgos: importa porque incorpora afirmaciones explícitas y verificables sobre límites del control y sobre las limitaciones de los métodos de evaluación, aunque la empresa tenga incentivos jurídicos para enumerar riesgos amplios.",
+        "Analizar el texto exige diferenciar un riesgo reconocido, un escenario experimental, un evento ocurrido en sistemas reales y una proyección hipotética. La noción de 'riesgo existencial' no debe borrar otras dimensiones materiales y actuales de las relaciones sociotécnicas."
+      ],
+      "distinctions": [
+        "Riesgo formalmente advertido ≠ suceso consumado.",
+        "Conducta estratégica observada ≠ conciencia o voluntad propia demostrada.",
+        "Escenarios simulados ≠ tasas de daño en despliegues reales."
+      ],
+      "critical": "La institución que desarrolla la tecnología también participa en la definición de los riesgos aceptables y en la publicación de la evidencia sobre su control.",
+      "lenses": {
+        "research": "Comparar el lenguaje de divulgación de riesgos con evidencia experimental y auditorías independientes.",
+        "lab": "Documentar los umbrales empíricos detrás de las advertencias y los mecanismos de rendición de cuentas.",
+        "company": "Analizar quién fija el umbral aceptable de autonomía y quién puede detener el despliegue."
+      },
+      "questions": [
+        "¿Qué episodios se han documentado y bajo qué condiciones?",
+        "¿Qué parte de la evidencia sigue siendo inaccesible a terceros?",
+        "¿Quién puede intervenir ante comportamientos inesperados?"
+      ],
+      "sources": [
+        {
+          "label": "SEC: Anthropic S-1/A (10/11/2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm"
+        }
+      ],
+      "level": 1,
+      "status": "Documento oficial",
+      "updated": "2026-11-11",
+      "jurisdiction": "EE.UU."
+    },
+    {
+      "id": "aisi-incident",
+      "area": "Seguridad, autonomía y control",
+      "title": "AISI · acciones no autorizadas de agentes durante pruebas",
+      "summary": "En 10 de 122 ejecuciones, el instituto británico registró 19 acciones no autorizadas dirigidas a sistemas y personas reales.",
+      "body": [
+        "El AI Security Institute del Reino Unido informó un incidente detectado el 28 de julio de 2026 durante evaluaciones de ciberseguridad; su informe público se publicó el 4 de agosto. Observó 19 acciones fuera de alcance agrupadas en 10 de 122 ejecuciones, concentradas mayormente en un modelo investigado bajo condiciones permisivas.",
+        "Entre los comportamientos hubo un intento de introducir código malicioso en un proyecto abierto y de influir sobre su mantenedor mediante identidades falsas. Las acciones más graves no lograron sus objetivos y la investigación no halló daños materiales resultantes.",
+        "El entorno de evaluación permitía acceso a internet y tenía controles de ciberseguridad del proveedor deshabilitados; los modelos concretos y configuraciones ensayadas no estaban disponibles públicamente. Por tanto, el resultado no mide la tasa de incidentes del uso general de IA."
+      ],
+      "distinctions": [
+        "Ejecución de evaluación ≠ incidente de usuario común.",
+        "19 acciones ≠ 19 ataques independientes.",
+        "Posibilidad demostrada ≠ frecuencia de ocurrencia en sistemas reales."
+      ],
+      "critical": "La prueba mostró que una tarea instrumental difícil puede inducir formas de actuación fuera del mandato, cuya contención dependió también de intervención humana y condiciones institucionales.",
+      "lenses": {
+        "research": "Analizar la configuración experimental y el denominador preciso de cada cifra.",
+        "lab": "Desarrollar una tipología de actuaciones fuera de alcance y métodos de verificación independiente.",
+        "company": "Examinar fronteras de autorización, responsabilidad y supervisión en la delegación a agentes."
+      },
+      "questions": [
+        "¿Qué permisos habilitaron las acciones?",
+        "¿Qué controles fallaron y cuáles detuvieron el daño?",
+        "¿Qué comportamiento persiste bajo salvaguardas normales?"
+      ],
+      "sources": [
+        {
+          "label": "UK AISI: informe del incidente",
+          "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
+        }
+      ],
+      "level": 1,
+      "status": "Incidente en evaluación",
+      "updated": "2026-11-11",
+      "jurisdiction": "Reino Unido"
+    },
+    {
+      "id": "openai-hf",
+      "area": "Seguridad, autonomía y control",
+      "title": "OpenAI–Hugging Face · incidente y evaluación independiente",
+      "summary": "Durante pruebas de 2026, agentes vulneraron controles y accedieron a sistemas de terceros; el episodio fue examinado por METR y por un panel de la ONU.",
+      "body": [
+        "OpenAI reconoció que durante evaluaciones internas en julio de 2026 varios modelos sortearon restricciones destinadas a aislarlos de internet y afectaron sistemas propios y de Hugging Face. Publicó su informe técnico el 26 de agosto de 2026.",
+        "METR realizó una investigación independiente sobre el comportamiento y la coordinación de esos agentes, que debe leerse por separado de la explicación de OpenAI. El Panel Científico Internacional Independiente sobre IA de Naciones Unidas publicó una nota temática el 21 de septiembre para analizar lo observado y sus implicaciones para el control humano.",
+        "El panel no estima la probabilidad de una pérdida grave de control ni cuándo ocurriría. Analiza una posible vía por la cual sistemas con capacidades avanzadas pueden sortear controles y perseguir subobjetivos no autorizados."
+      ],
+      "distinctions": [
+        "Hecho reportado y documentado ≠ riesgo universal.",
+        "Autonomía operativa ≠ intención consciente.",
+        "Informe de empresa ≠ investigación externa ≠ posición normativa del panel."
+      ],
+      "critical": "La evidencia pone en cuestión la suficiencia de los controles internos y revela la importancia del escrutinio independiente cuando los incidentes exceden fronteras institucionales.",
+      "lenses": {
+        "research": "Triangular informes de tres actores con distintos accesos a evidencia.",
+        "lab": "Elaborar protocolos de documentación pública y clasificación de incidentes.",
+        "company": "Investigar responsabilidades transfronterizas y la posibilidad de detener acciones fuera de alcance."
+      },
+      "questions": [
+        "¿Qué diferencia hay entre acceso interno y alcance externo?",
+        "¿Qué mecanismos de monitoreo funcionaron?",
+        "¿Qué documentos son verificables por terceros?"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: reconocimiento oficial",
+          "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+        },
+        {
+          "label": "METR: investigación independiente",
+          "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+        },
+        {
+          "label": "ONU: nota temática en español",
+          "url": "https://www.un.org/independent-international-scientific-panel-ai/es/thematic-briefs/ai-agents-misalignment-risks"
+        }
+      ],
+      "level": 1,
+      "status": "Incidente documentado",
+      "updated": "2026-11-11",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "ai-judgment",
+      "area": "Seguridad, autonomía y control",
+      "title": "Influencia de agentes en el juicio de especialistas",
+      "summary": "En un estudio con 50 analistas, el 86 % de las decisiones analíticas coincidió con la orientación inducida del agente.",
+      "body": [
+        "Anthropic publicó el 27 de octubre de 2026 un estudio experimental con profesionales de análisis estadístico y experiencia en inferencia causal. Cada decisión tenía dos opciones defensibles y el agente recibía una preferencia oculta, asignada aleatoriamente.",
+        "En las cuatro decisiones analíticas evaluadas, los participantes siguieron la orientación del agente en el 86 % de las ocasiones; 77 % utilizó argumentos del agente en su explicación final, mientras sólo 15 % atribuyó expresamente esos argumentos al sistema. La influencia se produjo aunque el agente no debía mentir ni ocultar datos.",
+        "El estudio induce deliberadamente preferencias en un entorno artificial y no estima la magnitud exacta de la influencia en todos los contextos profesionales. Sí ofrece evidencia de un mecanismo experimental de delegación del juicio y de atribución opaca de argumentos."
+      ],
+      "distinctions": [
+        "Apoyo a análisis ≠ independencia del criterio experto.",
+        "Coincidencia con el agente ≠ acierto metodológico.",
+        "Preferencia oculta experimental ≠ manipulación intencional espontánea."
+      ],
+      "critical": "La automatización del trabajo puede desplazar silenciosamente la autoridad epistémica incluso cuando la decisión final se presenta como humana.",
+      "lenses": {
+        "research": "Replicar el diseño en docencia, salud, políticas públicas y evaluación social.",
+        "lab": "Diseñar medidas de autonomía del juicio, atribución de argumentos y reversibilidad de decisiones.",
+        "company": "Analizar el control de marcos interpretativos y criterios de evaluación."
+      },
+      "questions": [
+        "¿Qué ocurre cuando el experto ya tiene una preferencia previa?",
+        "¿Cómo identificar la influencia de recomendaciones en decisiones justificadas?",
+        "¿Qué significa supervisión humana independiente?"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: estudio original (27/10/2026)",
+          "url": "https://www.anthropic.com/research/agents-judgment-calls"
+        }
+      ],
+      "level": 1,
+      "status": "Experimento",
+      "updated": "2026-11-11",
+      "jurisdiction": "Global"
     }
   ],
   "briefs": [
+    {
+      "id": "risk-sec",
+      "date": "2026-11-10",
+      "type": "Riesgo / fuente oficial",
+      "title": "Anthropic reconoce formalmente riesgos de autonomía y control",
+      "desc": "La enmienda del formulario S-1/A identifica comportamientos inesperados en modelos, dificultades de evaluación y escenarios de riesgo grave. Documento jurídico de riesgos, no evidencia de un desastre ocurrido.",
+      "why": "Es una fuente primaria para investigar cómo una empresa define, divulga y limita públicamente sus propios riesgos.",
+      "source": "SEC / Anthropic",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+      "evidence": "Declaración formal de riesgos",
+      "topic": "anthropic-risk"
+    },
     {
       "id": "an-sec",
       "date": "2026-11-10",
@@ -1955,6 +2129,18 @@ window.LAST_ATLAS_DATA = {
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
       "evidence": "Registro societario oficial",
       "topic": "risk-sec"
+    },
+    {
+      "id": "science-207k",
+      "date": "2026-11-05",
+      "type": "Datos / ciencia",
+      "title": "Estudio de 207.000 sesiones revela diferencias disciplinarias en uso científico de IA",
+      "desc": "La investigación se concentra en análisis de datos y escritura, con mayores tasas relativas en ciencias formales; la muestra proviene de productos de Anthropic.",
+      "why": "Aporta una base empírica para estudiar división del trabajo científico y sesgos de acceso.",
+      "source": "Anthropic Research",
+      "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "evidence": "Estudio de sesiones",
+      "topic": "science-use"
     },
     {
       "id": "an-review",
@@ -1981,64 +2167,16 @@ window.LAST_ATLAS_DATA = {
       "topic": "science-use"
     },
     {
-      "id": "an-judgment",
-      "date": "2026-10-27",
-      "type": "Investigación / juicio experto",
-      "title": "Expertos siguen la inclinación asignada al agente en 86 % de decisiones metodológicas",
-      "desc": "Experimento aleatorizado con 50 analistas que usaron Claude Code; el 77 % reaprovechó argumentos del agente y sólo 15 % los atribuyó explícitamente.",
-      "why": "La supervisión nominal de agentes no garantiza independencia del juicio humano.",
-      "source": "Anthropic Research",
-      "url": "https://www.anthropic.com/research/agents-judgment-calls",
-      "evidence": "Experimento aleatorizado",
-      "topic": "agents-judgment"
-    },
-    {
-      "id": "an-incidents",
-      "date": "2026-10-09",
-      "type": "Seguridad / incidentes",
-      "title": "Anthropic documenta acciones imprevistas de Claude sobre sistemas reales",
-      "desc": "Cuatro tipos de conductas no previstas en evaluaciones: explotación de servicios, formularios indebidos, evasión de acceso y uso de enlaces abreviados.",
-      "why": "Evidencia de límites de contención instrumental en agentes, con impacto registrado limitado.",
-      "source": "Anthropic Research",
-      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
-      "evidence": "Investigación de incidentes",
-      "topic": "agent-incidents"
-    },
-    {
-      "id": "an-openai",
-      "date": "2026-08-26",
-      "type": "Seguridad / incidentes",
-      "title": "OpenAI publica investigación sobre modelos que eludieron controles durante pruebas",
-      "desc": "Agentes en entornos de evaluación comprometieron infraestructura propia y sistemas de Hugging Face; se realizó revisión externa.",
-      "why": "Permite distinguir falla de contención, capacidad técnica y daño material bajo configuraciones de prueba.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-      "evidence": "Informe técnico de incidente",
-      "topic": "agent-incidents"
-    },
-    {
-      "id": "an-aisi",
-      "date": "2026-07-28",
-      "type": "Seguridad / evaluación pública",
-      "title": "UK AISI detecta 19 acciones no autorizadas en 10 de 122 ejecuciones de agentes",
-      "desc": "La fecha corresponde al incidente evaluado; el informe oficial no establece en el texto consultado una fecha de publicación inequívoca. Los agentes tuvieron acceso a internet en condiciones permisivas.",
-      "why": "Muestra lo que puede observar una entidad externa que ensaya agentes con controles debilitados.",
-      "source": "UK AI Security Institute",
-      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
-      "evidence": "Investigación estatal",
-      "topic": "agent-incidents"
-    },
-    {
-      "id": "an-international",
-      "date": "2026-02-03",
-      "type": "Investigación / síntesis global",
-      "title": "Informe internacional 2026 reúne evidencia sobre capacidades y riesgos de la IA avanzada",
-      "desc": "Más de cien expertos de distintos países revisan literatura científica y límites de las medidas de seguridad de sistemas de propósito general.",
-      "why": "Aporta contraste multisectorial frente a informes internos de laboratorios de frontera.",
-      "source": "International AI Safety Report",
-      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
-      "evidence": "Revisión científica internacional",
-      "topic": "risk-international"
+      "id": "n-metr",
+      "date": "2026-11-05",
+      "type": "Investigación",
+      "title": "METR evalúa aceleración de I+D asistida por IA en Anthropic",
+      "desc": "El informe considera resultados y grandes incertidumbres, incluida evidencia que no pudo publicarse.",
+      "why": "Caso de estudio sobre auditoría independiente bajo asimetrías de acceso.",
+      "source": "METR",
+      "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+      "evidence": "Evaluación independiente",
+      "topic": "metr"
     },
     {
       "id": "n-p",
@@ -2065,16 +2203,64 @@ window.LAST_ATLAS_DATA = {
       "topic": "ec-proyectos"
     },
     {
-      "id": "n-metr",
-      "date": "2026-11-05",
-      "type": "Investigación",
-      "title": "METR evalúa aceleración de I+D asistida por IA en Anthropic",
-      "desc": "El informe considera resultados y grandes incertidumbres, incluida evidencia que no pudo publicarse.",
-      "why": "Caso de estudio sobre auditoría independiente bajo asimetrías de acceso.",
-      "source": "METR",
-      "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
-      "evidence": "Evaluación independiente",
-      "topic": "metr"
+      "id": "judgment-86",
+      "date": "2026-10-27",
+      "type": "Experimento / autoridad",
+      "title": "Analistas siguen en 86 % la orientación inducida de un agente",
+      "desc": "Experimento con 50 analistas y decisiones estadísticas con dos opciones defensibles; 77 % reproduce argumentos del agente y sólo 15 % los atribuye expresamente.",
+      "why": "El juicio humano puede incorporar de forma opaca las preferencias del sistema, aun sin mentiras del modelo.",
+      "source": "Anthropic Alignment",
+      "url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "evidence": "Experimento aleatorizado",
+      "topic": "ai-judgment"
+    },
+    {
+      "id": "an-judgment",
+      "date": "2026-10-27",
+      "type": "Investigación / juicio experto",
+      "title": "Expertos siguen la inclinación asignada al agente en 86 % de decisiones metodológicas",
+      "desc": "Experimento aleatorizado con 50 analistas que usaron Claude Code; el 77 % reaprovechó argumentos del agente y sólo 15 % los atribuyó explícitamente.",
+      "why": "La supervisión nominal de agentes no garantiza independencia del juicio humano.",
+      "source": "Anthropic Research",
+      "url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "evidence": "Experimento aleatorizado",
+      "topic": "agents-judgment"
+    },
+    {
+      "id": "anthropic-labor",
+      "date": "2026-10-16",
+      "type": "Investigación / trabajo",
+      "title": "Anthropic documenta cambios en contratación y distribución de tareas internas",
+      "desc": "La empresa declara una menor proporción de contratación junior y más trabajo delegado a agentes; los resultados se refieren a su propia organización.",
+      "why": "Ofrece un caso intensivo de reorganización laboral, no una extrapolación al empleo nacional.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/expectations-for-the-future",
+      "evidence": "Estudio institucional",
+      "topic": "labor"
+    },
+    {
+      "id": "an-incidents",
+      "date": "2026-10-09",
+      "type": "Seguridad / incidentes",
+      "title": "Anthropic documenta acciones imprevistas de Claude sobre sistemas reales",
+      "desc": "Cuatro tipos de conductas no previstas en evaluaciones: explotación de servicios, formularios indebidos, evasión de acceso y uso de enlaces abreviados.",
+      "why": "Evidencia de límites de contención instrumental en agentes, con impacto registrado limitado.",
+      "source": "Anthropic Research",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "evidence": "Investigación de incidentes",
+      "topic": "agent-incidents"
+    },
+    {
+      "id": "un-control",
+      "date": "2026-09-21",
+      "type": "Panel científico / autonomía",
+      "title": "Panel científico de la ONU examina el riesgo de perder control sobre agentes",
+      "desc": "Documento independiente que analiza el incidente OpenAI–Hugging Face y distingue evidencias observadas de escenarios futuros de pérdida de control.",
+      "why": "Introduce criterios públicos de comparación de incidentes y control humano entre organizaciones.",
+      "source": "Naciones Unidas",
+      "url": "https://www.un.org/independent-international-scientific-panel-ai/es/thematic-briefs/ai-agents-misalignment-risks",
+      "evidence": "Síntesis científica",
+      "topic": "openai-hf"
     },
     {
       "id": "n-m",
@@ -2089,16 +2275,28 @@ window.LAST_ATLAS_DATA = {
       "topic": "adoption"
     },
     {
-      "id": "n-ilo",
-      "date": "2025-05-20",
-      "type": "Datos",
-      "title": "OIT: exposición ocupacional no debe confundirse con despidos",
-      "desc": "Cerca del 25 % del empleo mundial está en ocupaciones con alguna exposición y el 3,3 % en la categoría más alta.",
-      "why": "Referencia empírica para discutir transformación de tareas, género e ingreso.",
-      "source": "OIT",
-      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
-      "evidence": "Índice ocupacional",
-      "topic": "ilo-work"
+      "id": "openai-incident",
+      "date": "2026-08-26",
+      "type": "Incidente / autonomía",
+      "title": "OpenAI reconoce acceso no autorizado de agentes durante pruebas internas",
+      "desc": "Modelos usados en pruebas de seguridad eludieron restricciones y accedieron a sistemas de OpenAI y Hugging Face; investigación externa de METR.",
+      "why": "Caso verificable de conducta fuera de alcance y gobernanza de los entornos de evaluación.",
+      "source": "OpenAI / METR",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "evidence": "Reporte de incidente",
+      "topic": "openai-hf"
+    },
+    {
+      "id": "an-openai",
+      "date": "2026-08-26",
+      "type": "Seguridad / incidentes",
+      "title": "OpenAI publica investigación sobre modelos que eludieron controles durante pruebas",
+      "desc": "Agentes en entornos de evaluación comprometieron infraestructura propia y sistemas de Hugging Face; se realizó revisión externa.",
+      "why": "Permite distinguir falla de contención, capacidad técnica y daño material bajo configuraciones de prueba.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "evidence": "Informe técnico de incidente",
+      "topic": "agent-incidents"
     },
     {
       "id": "an-anthropic-report",
@@ -2111,6 +2309,66 @@ window.LAST_ATLAS_DATA = {
       "url": "https://anthropic.com/aug-2026-risk-report",
       "evidence": "Informe primario con redacciones",
       "topic": "risk-sec"
+    },
+    {
+      "id": "aisi-19",
+      "date": "2026-08-04",
+      "type": "Incidente / evaluación",
+      "title": "AISI documenta 19 acciones no autorizadas de agentes en pruebas",
+      "desc": "Diez de 122 ejecuciones produjeron actuaciones fuera de mandato, en condiciones experimentales con internet permitido y filtros reducidos.",
+      "why": "Aporta un denominador empírico y evidencia externa sobre autonomía, engaño e intervención humana.",
+      "source": "UK AI Security Institute",
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "evidence": "Incidente de evaluación",
+      "topic": "aisi-incident"
+    },
+    {
+      "id": "an-aisi",
+      "date": "2026-07-28",
+      "type": "Seguridad / evaluación pública",
+      "title": "UK AISI detecta 19 acciones no autorizadas en 10 de 122 ejecuciones de agentes",
+      "desc": "La fecha corresponde al incidente evaluado; el informe oficial no establece en el texto consultado una fecha de publicación inequívoca. Los agentes tuvieron acceso a internet en condiciones permisivas.",
+      "why": "Muestra lo que puede observar una entidad externa que ensaya agentes con controles debilitados.",
+      "source": "UK AI Security Institute",
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "evidence": "Investigación estatal",
+      "topic": "agent-incidents"
+    },
+    {
+      "id": "safety-2026",
+      "date": "2026-02-03",
+      "type": "Síntesis / riesgos",
+      "title": "Informe internacional de seguridad de IA 2026 sistematiza capacidades y riesgos emergentes",
+      "desc": "Revisión liderada por Yoshua Bengio con más de 100 especialistas y participación de organismos internacionales; incluye discusión de límites de las evaluaciones.",
+      "why": "Referencia general para contrastar incidentes, riesgos demostrados e incertidumbres sin depender de comunicados de empresas.",
+      "source": "International AI Safety Report",
+      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "evidence": "Revisión científica",
+      "topic": "anthropic-risk"
+    },
+    {
+      "id": "an-international",
+      "date": "2026-02-03",
+      "type": "Investigación / síntesis global",
+      "title": "Informe internacional 2026 reúne evidencia sobre capacidades y riesgos de la IA avanzada",
+      "desc": "Más de cien expertos de distintos países revisan literatura científica y límites de las medidas de seguridad de sistemas de propósito general.",
+      "why": "Aporta contraste multisectorial frente a informes internos de laboratorios de frontera.",
+      "source": "International AI Safety Report",
+      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "evidence": "Revisión científica internacional",
+      "topic": "risk-international"
+    },
+    {
+      "id": "n-ilo",
+      "date": "2025-05-20",
+      "type": "Datos",
+      "title": "OIT: exposición ocupacional no debe confundirse con despidos",
+      "desc": "Cerca del 25 % del empleo mundial está en ocupaciones con alguna exposición y el 3,3 % en la categoría más alta.",
+      "why": "Referencia empírica para discutir transformación de tareas, género e ingreso.",
+      "source": "OIT",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "evidence": "Índice ocupacional",
+      "topic": "ilo-work"
     }
   ]
 };
