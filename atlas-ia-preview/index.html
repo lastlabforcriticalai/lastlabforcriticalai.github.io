@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1d18">
+  <meta name="description" content="Atlas crítico de la inteligencia artificial: regulación, empresas, tecnología, infraestructuras, evidencia y poder. Biblioteca interactiva de LAST Lab.">
+  <meta property="og:title" content="Atlas de IA · LAST Lab">
+  <meta property="og:description" content="Conocimiento esencial sobre IA, sin simplificaciones. Una biblioteca crítica e interactiva.">
+  <title>Atlas de IA — LASTLab</title>
+
+  <style>
+:root{--bg:#0a1b17;--rail:#0c221c;--body:#10251f;--panel:#152d25;--panel2:#1a352b;--line:#365145;--line-soft:rgba(185,219,188,.17);--ink:#f0f1e9;--muted:#b3c4b8;--quiet:#81998b;--accent:#dce9a9;--accent-dark:#243a2e;--copper:#ddb798;--font:Inter,"Segoe UI",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 var(--font);-webkit-font-smoothing:antialiased}body,button,input{font-family:var(--font)}button{cursor:pointer}a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}::selection{background:var(--accent);color:var(--bg)}.skip-link{position:fixed;top:-60px;left:12px;background:var(--accent);color:#10241c;padding:9px 16px;z-index:1000}.skip-link:focus{top:10px}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}[hidden]{display:none!important}
+.top-progress{height:2px;position:fixed;z-index:30;top:0;left:0;right:0;background:transparent}.top-progress span{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}.app-shell{min-height:100vh;display:grid;grid-template-columns:280px minmax(0,1fr)}.side-rail{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--rail);border-right:1px solid var(--line-soft);padding:36px 23px 18px;display:flex;flex-direction:column;z-index:10;scrollbar-width:thin;scrollbar-color:#496252 transparent}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:33px}.brand-mark{width:42px;height:42px;border:1px solid #62816c;display:grid;place-items:center;color:var(--accent);border-radius:10px}.brand-mark svg{width:31px;height:31px}.brand-text{display:flex;flex-direction:column;line-height:1.1}.brand-text strong{font-size:23px;font-weight:800;letter-spacing:-1.1px}.brand-text strong span,.site-footer strong span{font-weight:350}.brand-text small{font:9px var(--mono);letter-spacing:2.3px;color:#9bbb9f;margin-top:7px}.rail-divider{border-top:1px solid var(--line-soft);margin:0 0 30px}.rail-divider.smaller{margin:26px 0}.rail-kicker{font:10px var(--mono);letter-spacing:1.65px;color:#8ea99a;margin:0 0 15px}.rail-title{font-family:var(--serif);font-size:30px;letter-spacing:-1px;line-height:1.07;margin-bottom:30px}.rail-title-small{font:11px var(--font);color:var(--muted);display:block;letter-spacing:.2px;margin-top:9px}.main-nav,.topic-nav{display:flex;flex-direction:column;gap:4px}.nav-link,.topic-link{width:100%;display:flex;align-items:center;text-align:left;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:8px;padding:11px 12px;gap:12px;line-height:1.3;font-size:12.5px;font-weight:550;transition:.2s}.nav-link:hover,.topic-link:hover{background:#233b2f;color:var(--ink)}.nav-link.active,.topic-link.active{background:#2e4938;border-color:#4e6b51;color:var(--accent)}.nav-icon{font-size:19px;width:20px;color:inherit;text-align:center;font-family:var(--serif);font-weight:400}.nav-arrow{margin-left:auto;opacity:.7;font-size:14px}.topic-link{padding:10px 8px}.topic-link .num{font:11px var(--mono);color:var(--quiet);width:25px}.topic-link .count{margin-left:auto;color:#849b8b;font:10px var(--mono)}.topic-link.active .num,.topic-link.active .count{color:var(--accent)}.rail-bottom{margin-top:auto;padding-top:27px}.reading-status{background:#172e25;border:1px solid var(--line-soft);padding:16px;border-radius:10px}.small-label{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:1.1px;color:#a4b6a6}.small-label span{color:var(--accent)}.progress-track{background:#324c3d;height:5px;border-radius:10px;margin:13px 0 10px;overflow:hidden}.progress-track div{height:100%;width:0;background:var(--accent);transition:width .3s}.reading-status p{font-size:11px;color:var(--muted);margin:0}.rail-identity{margin-top:28px;font:9px/1.85 var(--mono);letter-spacing:1.2px;color:#8fa597}.rail-identity span{letter-spacing:.4px;color:#6c8879}
+.main-column{min-width:0;background:radial-gradient(circle at 76% 5%,rgba(57,93,68,.16),transparent 29%),var(--bg)}.topbar{height:77px;border-bottom:1px solid var(--line-soft);padding:0 clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:20px}.breadcrumbs{font:10px var(--mono);letter-spacing:1.25px;color:#9bab9e;display:flex;gap:12px;white-space:nowrap}.breadcrumbs strong{color:var(--ink);font-weight:500}.slash{color:#526e5d}.top-actions{display:flex;gap:28px;align-items:center}.time-indicator{font:10px var(--mono);color:#adbfad;letter-spacing:.4px;white-space:nowrap}.time-indicator i{display:inline-block;background:#bfda91;height:6px;width:6px;border-radius:50%;margin-right:6px;box-shadow:0 0 0 4px #bbd69b15}.top-link{font-size:11px;text-decoration:none;color:var(--accent);white-space:nowrap}.top-link:hover{text-decoration:underline}main{width:100%}.view-section{padding:0 clamp(24px,5vw,80px) 85px;max-width:1520px;margin:0 auto}.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);align-items:center;min-height:520px;position:relative;gap:10px}.hero-copy{padding:58px 0 59px}.eyebrow{font:10px var(--mono);letter-spacing:2px;color:#b4c9aa;display:flex;align-items:center;gap:12px;margin:0 0 25px;text-transform:uppercase}.eyebrow-line{height:1px;width:23px;background:var(--accent)}h1,h2,h3,p{margin-top:0}.hero h1,.interior-hero h1{font-weight:570;font-size:clamp(47px,5.2vw,82px);letter-spacing:-3.3px;line-height:1.06;margin:0 0 27px}.hero h1 em,.interior-hero h1 em{display:inline-block;font:italic 400 1.0em/1.14 var(--serif);letter-spacing:-2.7px;color:var(--accent)}.hero-description{font-size:14.5px;max-width:665px;color:#b8cabc;line-height:1.95;margin-bottom:31px}.hero-actions,.export-buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:17px;min-height:44px;padding:10px 18px;border-radius:5px;text-decoration:none;font-size:12px;font-weight:650;border:1px solid transparent;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--accent);color:#1b3024}.btn-primary:hover{background:#eff5bc}.btn-muted{background:#263b2e;border-color:#4a6852;color:#e4eadd}.btn-muted:hover{background:#345342}.btn-outline{background:transparent;border-color:#496451;color:#e5eae2}.btn-outline:hover{background:#254036}.hero-art{height:420px;display:flex;align-items:center;justify-content:center;position:relative}.hero-art:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:#74996e;filter:blur(85px);opacity:.16}.hero-art svg{position:relative;width:min(100%,460px);height:auto}.orbit-label{position:absolute;color:#83a38b;font:9px var(--mono);letter-spacing:1.5px}.orbit-label.top{top:25px;right:0}.orbit-label.bottom{bottom:17px;left:25px}.statline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:48px}.statline>div{padding:26px 24px;border-right:1px solid var(--line-soft);display:flex;align-items:center;gap:15px}.statline>div:first-child{padding-left:0}.statline>div:last-child{border-right:none}.statline strong{font:41px/1 var(--serif);color:var(--accent);letter-spacing:-2px}.statline span{max-width:106px;font-size:10px;color:var(--muted);line-height:1.45}.leading-insight{background:linear-gradient(100deg,#22392d,#1a3027 82%);border-left:2px solid var(--accent);padding:22px 26px;display:flex;align-items:center;gap:21px;position:relative;margin-bottom:91px}.leading-square{font:32px var(--serif);color:var(--accent);flex-shrink:0}.leading-insight p{margin:0;color:#bfcfbd;font-size:13px;line-height:1.8;max-width:820px}.leading-insight strong{color:#f0efdf;font-weight:600}.leading-index{margin-left:auto;font:9px var(--mono);color:#9bad9d;letter-spacing:.5px;white-space:nowrap}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px}.section-head .eyebrow{margin-bottom:13px}.section-head h2{font-size:clamp(32px,3.4vw,50px);line-height:1.17;font-weight:540;letter-spacing:-1.8px;margin:0 0 8px}.muted-serif{font:italic 400 1em var(--serif);color:var(--accent)}.section-head p:not(.eyebrow){color:var(--muted);font-size:12.5px}.edition-stamp{font:9px/2 var(--mono);letter-spacing:1px;color:#8ba48e;text-align:right;padding:13px 0}.edition-stamp strong{color:var(--accent);font-size:12px}.explorer{background:#122820;border:1px solid var(--line-soft);border-radius:10px;padding:14px 17px 12px;margin-top:30px}.search-wrap{position:relative}.search-wrap input{width:100%;border:1px solid #405d48;border-radius:7px;padding:15px 52px 15px 47px;background:#0e201b;color:var(--ink);font-size:13.5px;outline:none}.search-wrap input::placeholder{color:#869b8b}.search-wrap input:focus{border-color:#afca9f;box-shadow:0 0 0 2px #bedab525}.search-icon{position:absolute;top:5px;left:13px;font-size:30px;line-height:1.3;color:#9cbaa3}.keycap{position:absolute;right:15px;top:12px;border:1px solid #54715a;border-radius:4px;padding:0px 7px;color:#90aa98;font:12px/24px var(--mono)}.controls-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:13px}.filters{display:flex;gap:4px;flex-wrap:wrap}.filter-pill{background:transparent;border:1px solid transparent;border-radius:5px;color:#9cae9f;padding:9px 12px;font:11px var(--font);white-space:nowrap}.filter-pill:hover{color:#edf1e4}.filter-pill.active{background:#304839;color:var(--accent);border-color:#4a6951}.tiny-counter{font:10px var(--mono);opacity:.85}.view-counter{font:10px var(--mono);color:#8fa798;white-space:nowrap}.view-counter span{color:var(--accent)}.lens-bar{border:1px solid var(--line-soft);margin:15px 0 25px;padding:15px 18px;display:flex;align-items:center;gap:18px;border-radius:8px;flex-wrap:wrap}.lens-title{display:flex;align-items:center;gap:7px;font-size:11px;color:#d4e0c7;font-weight:600;white-space:nowrap}.lens-glyph{font-size:23px;color:var(--accent)}.lens-options{display:flex;gap:4px;background:#0f201a;padding:3px;border-radius:5px}.lens-option{background:transparent;color:#9eb19d;border:0;border-radius:4px;font-size:10.5px;padding:8px 11px}.lens-option.active{color:#173024;background:var(--accent);font-weight:650}.lens-bar p{margin:0;margin-left:auto;color:#91a594;font-size:10.5px;max-width:220px;line-height:1.5}.active-area{font:10px var(--mono);color:var(--accent);padding:7px 0 16px;letter-spacing:1px}.cards-list{display:flex;flex-direction:column;gap:11px}.knowledge-card{background:linear-gradient(115deg,#172e25,#13271f);border:1px solid #365144;border-radius:9px;overflow:hidden;transition:border-color .2s,box-shadow .2s}.knowledge-card:hover{border-color:#71906c}.knowledge-card.expanded{border-color:#90af83;box-shadow:0 12px 35px rgba(0,0,0,.13)}.card-top{display:flex;gap:17px;padding:23px 23px 19px}.card-index{flex-shrink:0;font:12px var(--mono);color:#82a486;padding-top:6px}.card-main{flex:1;min-width:0}.card-meta{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 10px}.card-meta .category{font:9px var(--mono);letter-spacing:1.05px;color:var(--accent)}.state-chip{font:9px var(--mono);color:#c3c9b9;padding-left:10px;border-left:1px solid #53705b}.card-title-btn{border:0;background:none;padding:0;color:var(--ink);text-align:left;font:540 clamp(18px,2vw,25px)/1.22 var(--font);letter-spacing:-.5px;display:block;width:100%}.card-title-btn:hover{color:var(--accent)}.card-summary{font-size:12.5px;color:#acbcac;line-height:1.75;margin:11px 0 0;max-width:850px}.card-side{min-width:120px;display:flex;align-items:flex-start;gap:11px;justify-content:flex-end}.priority-label{font:9px var(--mono);color:#a5bf9c;text-align:right;padding-top:10px}.priority-label.bright{color:var(--accent)}.card-save{width:33px;height:33px;display:grid;place-items:center;border:1px solid #435f4b;border-radius:5px;color:#afc3ad;background:#21382c;font-size:17px}.card-save.active{background:#dce9a9;color:#193226}.card-expand-symbol{color:#b4caa9;font:22px/33px var(--serif);width:30px;text-align:center}.card-details{border-top:1px solid var(--line-soft);padding:27px 28px 29px 60px;animation:fade-in .25s ease}.details-lead{font:11px var(--mono);color:var(--accent);letter-spacing:1px;margin-bottom:16px}.details-body{font-size:13.5px;color:#d1ddcf;line-height:1.95;max-width:910px}.details-body p{margin:0 0 14px}.details-split{display:grid;grid-template-columns:1fr 1fr;gap:19px;margin-top:25px}.detail-panel{border:1px solid #3e5946;background:#14291f;border-radius:7px;padding:20px}.detail-panel h4{font:10px var(--mono);letter-spacing:1px;color:var(--accent);margin:0 0 13px;text-transform:uppercase}.detail-panel ul,.detail-panel ol{padding:0 0 0 16px;margin:0;color:#d0dacb;font-size:12.5px;line-height:1.75}.detail-panel li{margin-bottom:9px}.detail-panel li:last-child{margin-bottom:0}.critical-note{border-left:2px solid var(--copper);background:#322e25;padding:17px 21px;margin-top:18px}.critical-note small{display:block;font:10px var(--mono);color:var(--copper);letter-spacing:1px;margin-bottom:7px}.critical-note p{font-size:13px;color:#e5d9c8;margin:0}.lens-application{display:flex;gap:15px;padding:20px 0;border-bottom:1px solid var(--line-soft)}.lens-application .lens-application-icon{color:var(--accent);font:24px var(--serif)}.lens-application small{font:10px var(--mono);letter-spacing:1px;color:var(--accent)}.lens-application p{color:#dce3d7;font-size:13px;margin:6px 0 0}.detail-heading{font:10px var(--mono);letter-spacing:1px;color:var(--accent);text-transform:uppercase;margin:25px 0 9px}.question-list{list-style:none;padding:0;margin:0}.question-list li{font-size:12.5px;color:#bdcbbd;border-bottom:1px solid var(--line-soft);padding:9px 0}.question-list li:before{content:"↗";color:var(--accent);margin-right:12px}.sources-row{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 22px}.source-link{font-size:11px;color:#e3edc9;border:1px solid #526c53;border-radius:4px;padding:7px 11px;text-decoration:none}.source-link:hover{background:#344c37}.card-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.detail-actions{display:flex;gap:9px;flex-wrap:wrap}.detail-action{background:#2b4433;border:1px solid #527053;color:#e5eedc;font-size:11px;padding:9px 12px;border-radius:5px}.detail-action:hover{background:#38563d}.detail-action.read{background:#dce9a9;color:#193321}.detail-footnote{font:10px var(--mono);color:#829f8b}.empty-state{text-align:center;border:1px dashed #577158;border-radius:12px;padding:60px 20px}.empty-icon{font-size:64px;color:var(--accent)}.empty-state h3{font-family:var(--serif);font-size:25px;font-weight:400}.empty-state p{color:var(--muted);font-size:12px}.library-bottom{margin-top:70px;border-top:1px solid var(--line);padding-top:38px;display:flex;justify-content:space-between;align-items:center;gap:35px}.library-bottom h3{font:28px var(--serif);margin:0 0 11px}.library-bottom p:not(.eyebrow){max-width:500px;color:var(--muted);font-size:12px}.library-bottom .eyebrow{margin-bottom:14px}.export-buttons{justify-content:flex-end}.interior-hero{padding:75px 0 60px;border-bottom:1px solid var(--line);margin-bottom:40px}.interior-hero .eyebrow{margin-bottom:24px}.interior-hero h1{max-width:1000px}.interior-hero>p:last-child{max-width:740px;color:var(--muted);font-size:15px;line-height:1.9}.power-intro{display:flex;align-items:center;gap:20px;border-left:3px solid var(--accent);background:#20362a;padding:16px 20px;margin-bottom:28px}.power-intro .mark{font:24px var(--serif);color:var(--accent)}.power-intro p{margin:0;color:#d2ded0;font-size:13px}.case-switcher{display:flex;gap:9px;margin:25px 0}.case-pill{background:#21392d;border:1px solid #415f49;color:#d0dfd0;padding:15px 20px;font-size:14px;border-radius:6px;text-align:left}.case-pill.active{background:var(--accent);color:#183024}.case-pill span{font-size:10px;display:block;opacity:.7;margin-top:2px}.case-board{background:#152d24;border:1px solid #425e4b;border-radius:9px;padding:28px}.case-board-header{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:28px}.case-board-header h2{font-size:31px;font-weight:500;letter-spacing:-1px;margin:0 0 3px}.case-board-header p{font:11px var(--mono);color:#a8bfab;margin:0}.case-type{font:10px var(--mono);color:var(--accent);white-space:nowrap}.company-diagram{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr;gap:7px;align-items:stretch}.diagram-node{background:#233e30;border:1px solid #67876a;border-radius:6px;padding:20px 14px;min-height:130px}.diagram-node span{font:10px var(--mono);color:#a8c69f}.diagram-node strong{display:block;font-size:14px;line-height:1.4;margin:10px 0 5px}.diagram-node p{font-size:11px;color:#adbeae;line-height:1.55;margin:0}.diagram-arrow{display:grid;place-items:center;color:var(--accent);font-size:24px}.case-explainer{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;padding-top:28px}.case-explainer h3{font:23px var(--serif);margin:0 0 13px}.case-explainer p{font-size:13px;color:#c3d0c4}.case-explainer .case-questions{padding:18px;background:#203a2d;border-radius:5px}.case-questions strong{font:10px var(--mono);color:var(--accent)}.case-questions p{margin:10px 0}.case-sources{margin-top:16px;display:flex;gap:9px;flex-wrap:wrap}.comparison{margin:65px 0}.comparison h2{font-weight:500;font-size:31px;margin-bottom:24px}.comparison-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.compare-box{border-top:2px solid #9fb58c;background:#1b3328;padding:20px 16px}.compare-box span{font:10px var(--mono);color:var(--accent)}.compare-box strong{font-size:15px;line-height:1.4;display:block;margin:14px 0}.compare-box p{font-size:12px;color:var(--muted);margin:0}.power-cta{border:1px solid #5f795b;background:linear-gradient(110deg,#254333,#1b2f24);padding:36px}.power-cta h3{font:31px var(--serif);margin:0 0 12px}.power-cta>p:not(.eyebrow){font-size:13px;color:var(--muted);max-width:760px}.static-notice{display:flex;gap:15px;align-items:start;background:#2b3028;border-left:2px solid var(--copper);padding:20px 23px;margin-bottom:42px}.static-notice>span{color:var(--copper);font-size:26px}.static-notice strong{font-size:13px;color:#eadbc9}.static-notice p{font-size:11.5px;color:#d0c7ba;margin:7px 0 0}.static-notice code{color:var(--accent)}.news-heading{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #4a6450;padding:0 0 15px;color:#afc5ae;font:10px var(--mono);letter-spacing:1.5px}.news-item{display:grid;grid-template-columns:115px 1fr;gap:22px;border-bottom:1px solid #3a5344;padding:29px 0}.news-date{font:12px var(--mono);color:var(--accent);padding-top:6px}.news-content small{font:10px var(--mono);color:#a6bfa7;letter-spacing:.5px}.news-content h3{font-weight:530;letter-spacing:-.5px;font-size:23px;line-height:1.3;margin:8px 0 10px}.news-content p{font-size:13px;color:var(--muted);line-height:1.85}.news-why{border-left:2px solid #749678;padding-left:15px;color:#d9e3d4!important}.news-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:16px}.news-links a{font-size:11px;color:var(--accent);text-decoration:none;border-bottom:1px solid #6d8c65}.news-links button{font-size:11px;color:#e5e9d8;background:none;border:0;text-decoration:underline;text-underline-offset:3px}.editorial-standards{margin-top:60px;display:grid;grid-template-columns:1fr 1.5fr;gap:30px;border-top:1px solid var(--line);padding-top:30px}.editorial-standards h3{font:30px var(--serif)}.editorial-standards p{font-size:13px;color:var(--muted)}.method-grid{display:grid;grid-template-columns:85px 1fr;max-width:900px;column-gap:20px}.method-grid>div{border-bottom:1px solid var(--line-soft);padding:24px 0}.method-number{font:40px var(--serif);color:var(--accent);padding-top:10px!important}.method-grid h3{font:25px var(--serif);margin:0 0 7px}.method-grid p{font-size:13px;color:var(--muted)}.method-tool{background:linear-gradient(100deg,#2c4634,#1b3328);border:1px solid #608363;padding:30px;display:flex;align-items:center;gap:20px;justify-content:space-between;margin:47px 0}.method-tool h2{font-size:29px;font-weight:500;letter-spacing:-.6px;margin-bottom:7px}.method-tool p:not(.eyebrow){font-size:12px;color:var(--muted);max-width:570px;margin:0}.source-priority{margin-top:50px;max-width:930px}.priority-line{display:grid;grid-template-columns:50px 1fr 2fr;gap:12px;border-top:1px solid var(--line);padding:18px 0;align-items:baseline}.priority-line span{font:11px var(--mono);color:var(--accent)}.priority-line strong{font-size:14px}.priority-line p{font-size:12px;color:var(--muted);margin:0}.site-footer{border-top:1px solid var(--line-soft);padding:35px clamp(24px,5vw,80px);display:flex;justify-content:space-between;align-items:center;gap:20px;background:#0b2019}.site-footer>div{display:flex;flex-direction:column;gap:5px}.site-footer strong{font-size:20px}.site-footer span,.site-footer p{font-size:10px;color:#8ca392}.site-footer p{max-width:370px}.site-footer a{font:11px var(--mono);text-decoration:none;color:var(--accent)}.toast{position:fixed;bottom:24px;right:24px;z-index:99;pointer-events:none;background:var(--accent);color:#162b1e;border-radius:6px;padding:12px 18px;font-size:12px;font-weight:650;opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;max-width:350px}.toast.visible{opacity:1;transform:translateY(0)}@keyframes fade-in{from{opacity:.4;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1250px){.app-shell{grid-template-columns:236px minmax(0,1fr)}.side-rail{padding:25px 15px}.hero h1{font-size:clamp(43px,5vw,67px)}.statline>div{padding:21px 11px;gap:10px}.statline strong{font-size:32px}.leading-index{display:none}.lens-bar p{margin-left:0}.hero-art{height:350px}}
+@media(max-width:1050px){.app-shell{display:block}.side-rail{position:relative;height:auto;overflow:visible;padding:15px 24px;display:block}.brand{margin:0 0 13px}.brand-mark{width:35px;height:35px}.brand-text strong{font-size:20px}.rail-divider,.rail-kicker,.rail-title,.topic-nav,.rail-bottom{display:none}.main-nav{flex-direction:row;gap:5px;overflow-x:auto;scrollbar-width:none}.nav-link{white-space:nowrap;width:auto;font-size:11px;padding:8px 10px}.nav-icon{font-size:15px;width:15px}.nav-arrow{display:none}.topbar{height:51px;padding:0 24px}.hero{min-height:450px}.hero-art{max-width:360px;margin:auto}.view-section{padding-left:24px;padding-right:24px}.site-footer{padding-left:24px;padding-right:24px}.statline>div{padding:17px 14px}.statline span{font-size:9.5px}}
+@media(max-width:700px){.topbar{display:none}.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:55px 0 15px}.hero h1,.interior-hero h1{font-size:clamp(43px,10vw,64px);letter-spacing:-2px}.hero h1 em,.interior-hero h1 em{letter-spacing:-1.6px}.hero-art{height:280px;width:100%;max-width:310px}.hero-art svg{max-height:290px}.orbit-label.top{top:1px}.orbit-label.bottom{bottom:6px}.statline{grid-template-columns:repeat(2,1fr);margin-bottom:32px}.statline>div{border-bottom:1px solid var(--line-soft)}.statline>div:nth-child(2){border-right:0}.statline>div:nth-child(3),.statline>div:nth-child(4){border-bottom:none}.statline>div:nth-child(3){padding-left:0}.leading-insight{margin-bottom:58px;padding:16px 18px}.leading-square{display:none}.section-head{align-items:flex-start}.edition-stamp{display:none}.explorer{padding:10px}.controls-row{align-items:flex-start;flex-direction:column;gap:4px}.filter-pill{padding:7px 8px}.lens-bar{gap:10px;padding:11px}.lens-options{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.lens-option{padding:9px 3px}.lens-bar p{font-size:10px}.card-top{padding:19px 14px;gap:9px;flex-wrap:wrap}.card-index{width:23px}.card-main{flex:1}.card-side{width:100%;padding-left:30px;justify-content:flex-start}.card-save{margin-left:0}.card-expand-symbol{display:none}.priority-label{text-align:left;padding-top:9px}.card-title-btn{font-size:20px}.card-details{padding:23px 16px}.details-split{grid-template-columns:1fr}.case-board{padding:17px}.case-board-header{display:block}.case-type{display:block;margin-top:11px}.company-diagram{display:flex;flex-direction:column}.diagram-node{min-height:0}.diagram-arrow{transform:rotate(90deg)}.case-explainer{grid-template-columns:1fr;gap:4px}.comparison-grid{grid-template-columns:repeat(2,1fr)}.library-bottom,.method-tool{display:block}.export-buttons{justify-content:flex-start}.news-item{grid-template-columns:1fr;gap:7px}.editorial-standards{grid-template-columns:1fr;gap:5px}.priority-line{grid-template-columns:42px 1fr}.priority-line p{grid-column:2}.site-footer{display:block}.site-footer a{display:block;margin-top:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+
+  </style>
+
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="top-progress" aria-hidden="true"><span id="top-progress-fill"></span></div>
+  <div class="app-shell">
+    <aside class="side-rail" aria-label="Navegación del atlas">
+      <a class="brand" href="https://lastlab.lat/es/" target="_blank" rel="noopener noreferrer" aria-label="LAST Lab: abrir sitio institucional">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 38 38"><path d="M5 11.7 18.9 5l14 6.7-14 7.2L5 11.7ZM5 11.7v15l13.9 7V18.9m14-7.2v15l-14 7m0-14.8-7-3.5m7 3.5 7-3.5M5 26.7l13.9-7.8 14 7.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="18.9" cy="3.6" r="1.7" fill="currentColor"/><circle cx="33.8" cy="5.5" r="1.5" fill="currentColor"/></svg></span>
+        <span class="brand-text"><strong>LAST<span>Lab</span></strong><small>FOR CRITICAL AI</small></span>
+      </a>
+      <div class="rail-divider"></div>
+      <p class="rail-kicker">OBSERVATORIO · 001</p>
+      <div class="rail-title">Atlas de IA<span class="rail-title-small">Un mapa del campo</span></div>
+      <nav class="main-nav" aria-label="Secciones principales">
+        <button class="nav-link active" data-view="atlas" aria-current="page"><span class="nav-icon">◫</span><span>Explorar el atlas</span><span class="nav-arrow">↗</span></button>
+        <button class="nav-link" data-view="poder"><span class="nav-icon">◇</span><span>Mapa de poder</span><span class="nav-arrow">↗</span></button>
+        <button class="nav-link" data-view="actualidad"><span class="nav-icon">◷</span><span>Actualidad curada</span><span class="nav-arrow">↗</span></button>
+        <button class="nav-link" data-view="metodo"><span class="nav-icon">∴</span><span>Método de lectura</span><span class="nav-arrow">↗</span></button>
+      </nav>
+      <div class="rail-divider smaller"></div>
+      <p class="rail-kicker">BIBLIOTECA TEMÁTICA</p>
+      <nav class="topic-nav" id="topic-nav" aria-label="Áreas de conocimiento"></nav>
+      <div class="rail-bottom">
+        <div class="reading-status">
+          <div class="small-label">RECORRIDO PERSONAL <span id="progress-percent">0%</span></div>
+          <div class="progress-track"><div id="reading-progress"></div></div>
+          <p id="progress-label">0 de 35 temas leídos</p>
+        </div>
+        <div class="rail-identity">DESDE AMÉRICA LATINA<br><span>Rigor · experimentación · crítica</span></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>LAST LAB</span><span class="slash">/</span><span>RECURSOS</span><span class="slash">/</span><strong>ATLAS DE IA</strong></div>
+        <div class="top-actions"><span class="time-indicator"><i></i> EDICIÓN <time datetime="2026-11-10">10.11.2026</time></span><a href="https://lastlab.lat/es/" target="_blank" rel="noopener noreferrer" class="top-link">Sitio institucional <span aria-hidden="true">↗</span></a></div>
+      </header>
+
+      <main id="main">
+        <section id="view-atlas" class="view-section" aria-labelledby="atlas-h1">
+          <div class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> BASE DE CONOCIMIENTO · EDICIÓN FUNDACIONAL</p>
+              <h1 id="atlas-h1">Conocer la IA.<br><em>Comprender el poder.</em></h1>
+              <p class="hero-description">Leyes, gobierno corporativo, arquitecturas, infraestructuras y evidencia. Un atlas para investigar, desarrollar e intervenir sobre tecnologías reales — sin reducir el conocimiento a titulares ni a definiciones superficiales.</p>
+              <div class="hero-actions"><a class="btn btn-primary" href="#explorar">Explorar los temas <span>↘</span></a><button class="btn btn-muted" id="jump-essential">Ver imprescindibles <span>↗</span></button></div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit-label top">PODER / DISEÑO</div>
+              <svg viewBox="0 0 410 390" preserveAspectRatio="xMidYMid meet">
+                <defs><linearGradient id="glow" x1="0" x2="1"><stop offset="0" stop-color="#b4e2c3" stop-opacity=".7"/><stop offset="1" stop-color="#d7e995" stop-opacity=".2"/></linearGradient></defs>
+                <circle cx="210" cy="190" r="145" fill="none" stroke="#a0baa6" stroke-width=".6" stroke-dasharray="4 7" opacity=".28"/>
+                <circle cx="210" cy="190" r="101" fill="none" stroke="#bdd7ad" stroke-width=".8" opacity=".31"/>
+                <circle cx="210" cy="190" r="47" fill="#b4e2c3" fill-opacity=".055" stroke="#b4e2c3" stroke-opacity=".48" />
+                <g stroke="url(#glow)" stroke-width="1" fill="none" opacity=".68"><path d="M210 190 130 86 330 110 355 234 236 336 70 263 130 86 M210 190 330 110 M210 190 355 234 M210 190 236 336 M210 190 70 263 M130 86 70 263 M330 110 236 336 M70 263 236 336"/><path d="M210 190 68 150 159 341 293 63 355 234" stroke-dasharray="2 7" /></g>
+                <g fill="#e4efca"><circle cx="210" cy="190" r="5.5"/><circle cx="130" cy="86" r="4"/><circle cx="330" cy="110" r="4"/><circle cx="355" cy="234" r="4"/><circle cx="236" cy="336" r="4"/><circle cx="70" cy="263" r="4"/></g>
+                <g fill="#9fbda5"><circle cx="68" cy="150" r="2.5"/><circle cx="159" cy="341" r="2.5"/><circle cx="293" cy="63" r="2.5"/></g>
+                <g fill="#d5e9c0" font-family="monospace" font-size="10" letter-spacing="1"><text x="104" y="60">ESTADO</text><text x="320" y="88">CAPITAL</text><text x="317" y="265">MODELO</text><text x="202" y="364">TRABAJO</text><text x="25" y="292">DATOS</text><text x="172" y="176">SISTEMA</text></g>
+              </svg>
+              <div class="orbit-label bottom">MAPEAR · DISTINGUIR · INTERVENIR</div>
+            </div>
+          </div>
+          <div class="statline" aria-label="Datos de la biblioteca"><div><strong id="stat-total">35</strong><span>núcleos de conocimiento</span></div><div><strong>05</strong><span>áreas interconectadas</span></div><div><strong>03</strong><span>lentes de aplicación</span></div><div><strong>01</strong><span>criterio: evidencia</span></div></div>
+          <div class="leading-insight"><span class="leading-square">↗</span><p><strong>La pregunta no es únicamente qué puede hacer un modelo.</strong> Es quién lo controla, bajo qué reglas opera, qué trabajo e infraestructuras requiere y quién puede modificar, impugnar o abandonar el sistema.</p><span class="leading-index">TESIS DE PARTIDA / 01</span></div>
+          <div id="explorar" class="library-heading section-head"><div><p class="eyebrow">EXPLORADOR / BIBLIOTECA</p><h2>Lo que hay que saber <span class="muted-serif">sí o sí.</span></h2><p>No es una lista de enlaces: cada ficha desarrolla conceptos, límites, preguntas difíciles y fuentes.</p></div><div class="edition-stamp">ÚLTIMA CURADURÍA<br><strong>10 NOV 2026</strong></div></div>
+          <div class="explorer" role="search" aria-label="Filtrar conocimiento">
+            <div class="search-wrap"><label for="search" class="sr-only">Buscar en todo el conocimiento del atlas</label><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Buscar por concepto, norma, empresa, autor, país…"><span class="keycap" aria-hidden="true">/</span></div>
+            <div class="controls-row"><div class="filters" role="group" aria-label="Prioridad de lectura"><button class="filter-pill active" data-filter="all" aria-pressed="true">Todos</button><button class="filter-pill" data-filter="essential" aria-pressed="false">Imprescindibles</button><button class="filter-pill" data-filter="saved" aria-pressed="false">Guardados <span id="saved-count" class="tiny-counter">0</span></button><button class="filter-pill" data-filter="unread" aria-pressed="false">Pendientes</button></div><div class="view-counter"><span id="result-count">35</span> temas visibles</div></div>
+          </div>
+          <div class="lens-bar"><div class="lens-title"><span class="lens-glyph">✳</span><span>Leer desde</span></div><div class="lens-options" role="group" aria-label="Perspectiva de aplicación"><button data-lens="research" class="lens-option active" aria-pressed="true">Investigación</button><button data-lens="lab" class="lens-option" aria-pressed="false">LAST Lab</button><button data-lens="company" class="lens-option" aria-pressed="false">Empresa IA</button></div><p id="lens-explain">Enfoque: preguntas académicas, evidencia y métodos de investigación.</p></div>
+          <div id="active-filter-label" class="active-area" hidden></div>
+          <div id="cards" class="cards-list" aria-live="polite"></div>
+          <div id="no-results" class="empty-state" hidden><div class="empty-icon">∅</div><h3>No aparecen temas con ese criterio</h3><p>Probá con otro concepto, una jurisdicción o quitá los filtros.</p><button class="btn btn-muted" id="reset-filter">Restablecer filtros</button></div>
+          <div class="library-bottom"><div><p class="eyebrow">TU RECORRIDO</p><h3>El conocimiento no se agota en leer.</h3><p>Los temas marcados como leídos y los guardados permanecen en este navegador. No se envían a ningún servidor.</p></div><div class="export-buttons"><button class="btn btn-outline" id="download-notes">Exportar mi ruta .md ↓</button><button class="btn btn-outline" id="download-sources">Fuentes .csv ↓</button></div></div>
+        </section>
+
+        <section id="view-poder" class="view-section" hidden aria-labelledby="poder-h1">
+          <div class="interior-hero"><p class="eyebrow">02 / GOBIERNO CORPORATIVO</p><h1 id="poder-h1">¿Quién decide <em>en una empresa de IA?</em></h1><p>Acciones, voto, directorios, misiones y beneficiarios no son sinónimos. Compará arquitecturas de gobierno antes de imaginar una organización propia.</p></div>
+          <div class="power-intro"><span class="mark">01</span><p>La pregunta rectora es <strong>quién puede imponer una decisión y quién puede detenerla</strong>, no solo quién aparece como propietario de la compañía.</p></div>
+          <div class="case-switcher" role="group" aria-label="Seleccionar empresa"><button data-case="anthropic" class="case-pill active" aria-pressed="true">Anthropic <span>Claude</span></button><button data-case="openai" class="case-pill" aria-pressed="false">OpenAI <span>ChatGPT</span></button></div>
+          <div id="case-content"></div>
+          <div class="comparison"><p class="eyebrow">COMPARACIÓN INSTITUCIONAL</p><h2>Cuatro dimensiones que no hay que confundir.</h2><div class="comparison-grid"><div class="compare-box"><span>01 / PROPIEDAD</span><strong>¿Quién posee activos y participaciones?</strong><p>Derechos económicos, capital, licencias y patrimonio.</p></div><div class="compare-box"><span>02 / CONTROL</span><strong>¿Quién decide y remueve autoridades?</strong><p>Clases de voto, designación de directorio, vetos y quórum.</p></div><div class="compare-box"><span>03 / PROPÓSITO</span><strong>¿A qué se obliga la organización?</strong><p>Misión, compromisos públicos, estatutos y mecanismos de exigibilidad.</p></div><div class="compare-box"><span>04 / SALIDA</span><strong>¿Cómo se impugna o se abandona?</strong><p>Derechos de minorías, garantías, portabilidad y acceso a recursos.</p></div></div></div>
+          <div class="power-cta"><p class="eyebrow">DEL CASO A LA PRÁCTICA</p><h3>El diseño institucional también es diseño tecnológico.</h3><p>Para articular investigación y desarrollo comercial, una posibilidad es distinguir expresamente laboratorio, empresa y contratos de licencia. No es una recomendación de forma jurídica definitiva: requiere asesoramiento y decisión institucional.</p><button class="btn btn-primary" id="view-sas">Leer sobre SAS y propiedad intelectual ↗</button></div>
+        </section>
+
+        <section id="view-actualidad" class="view-section" hidden aria-labelledby="news-h1">
+          <div class="interior-hero"><p class="eyebrow">03 / CURADURÍA · NO CLICKBAIT</p><h1 id="news-h1">Lo que cambia <em>el terreno.</em></h1><p>Hechos institucionales, investigación verificable y transformaciones relevantes. No confundimos anuncios, propuestas y legislación vigente.</p></div>
+          <div class="static-notice"><span aria-hidden="true">◎</span><div><strong>Edición editorial cerrada: 10 de noviembre de 2026.</strong><p>Estas noticias son una selección estática incluida en el ZIP. La alerta diaria de ChatGPT no publica contenido automáticamente en esta web. Para actualizarla, se edita <code>data.js</code> o se conecta más adelante un proceso editorial.</p></div></div>
+          <div class="news-heading"><span>SELECCIÓN DOCUMENTAL</span><span id="news-count">06 entradas</span></div>
+          <div id="news-list" class="news-list"></div>
+          <div class="editorial-standards"><h3>¿Qué queda fuera?</h3><div><p>Rumores de valoración, capturas descontextualizadas, comparativas sin metodología, frases de ejecutivos reproducidas como hechos y notas que simplemente promocionan un producto.</p><p>Un comunicado empresarial puede ser una fuente primaria sobre lo que la empresa anuncia, pero no prueba por sí mismo que sus afirmaciones de rendimiento sean correctas.</p></div></div>
+        </section>
+
+        <section id="view-metodo" class="view-section" hidden aria-labelledby="method-h1">
+          <div class="interior-hero"><p class="eyebrow">04 / PROTOCOLO DE LECTURA</p><h1 id="method-h1">Rigor antes <em>que velocidad.</em></h1><p>Un método práctico para investigar innovaciones, leyes, compañías y sistemas de IA sin caer en el marketing ni en un criticismo puramente declarativo.</p></div>
+          <div class="method-grid"><div class="method-number">01</div><div><h3>Precisar el objeto</h3><p>¿Analizás una empresa, un modelo, una aplicación, una norma, un acuerdo o una infraestructura? Especificá la entidad concreta, versiones y actores involucrados.</p></div><div class="method-number">02</div><div><h3>Identificar la fuente original</h3><p>Priorizar registro oficial, texto de ley, prospecto financiero, paper o documentación de implementación. Usar medios cuando aporten verificación contextual y contraste.</p></div><div class="method-number">03</div><div><h3>Separar hechos de promesas</h3><p>Registrar «presentado», «anunciado», «aprobado», «vigente», «evaluado» o «observado». No trasladar el alcance de una evidencia a una conclusión más fuerte.</p></div><div class="method-number">04</div><div><h3>Reconstruir relaciones de poder</h3><p>Quién financia, quién controla activos y estándares, qué decisiones quedan automatizadas, qué trabajo se requiere y quién soporta los riesgos.</p></div><div class="method-number">05</div><div><h3>Probar límites y alternativas</h3><p>Interrogar fallos, explicaciones rivales, representatividad, condiciones de replicación, portabilidad, costos de salida e intervención humana efectiva.</p></div><div class="method-number">06</div><div><h3>Traducir la crítica en una decisión</h3><p>Definir qué debería documentarse, modificarse, evaluarse o rechazarse. Una conclusión rigurosa conserva sus incertidumbres y abre opciones concretas.</p></div></div>
+          <div class="method-tool"><div><p class="eyebrow">PROTOCOLO REUTILIZABLE</p><h2>Seis preguntas para cualquier novedad de IA.</h2><p>Podés copiar la plantilla y usarla para evaluar productos, convocatorias, cambios societarios, papers o nuevas leyes.</p></div><button class="btn btn-primary" id="copy-method">Copiar plantilla ↗</button></div>
+          <div class="source-priority"><p class="eyebrow">JERARQUÍA DE FUENTES</p><div class="priority-line"><span>01</span><strong>Fuentes primarias</strong><p>Leyes, gacetas, reguladores, SEC, estudios originales, documentación técnica.</p></div><div class="priority-line"><span>02</span><strong>Evaluación independiente</strong><p>Organismos especializados, replicaciones, auditorías con métodos y límites explícitos.</p></div><div class="priority-line"><span>03</span><strong>Periodismo especializado</strong><p>Para contexto, contradicción de versiones, hallazgos propios y seguimiento público.</p></div><div class="priority-line"><span>04</span><strong>Comunicados y marketing</strong><p>Útiles para saber qué declara una organización; insuficientes para confirmar eficacia o impacto.</p></div></div>
+        </section>
+      </main>
+      <footer class="site-footer"><div><strong>LAST<span>Lab</span></strong><span>Atlas de IA · Conocimiento crítico y situado.</span></div><p>Una base editorial, no asesoramiento legal. Revisar fuentes y fechas antes de decisiones institucionales o comerciales.</p><a href="https://lastlab.lat/es/" target="_blank" rel="noopener noreferrer">lastlab.lat ↗</a></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script>
+/* Contenido editorial del Atlas de IA. Actualizar manualmente y validar fuentes. */
+window.LAST_ATLAS_DATA = {
+  "asOf": "2026-11-10",
+  "sections": [
+    {
+      "id": "Normas y derechos",
+      "nav": "Regulación y derechos",
+      "num": "01",
+      "description": "Qué obliga, qué está en proyecto y dónde comienzan las responsabilidades."
+    },
+    {
+      "id": "Gobierno y empresas",
+      "nav": "Empresas y poder",
+      "num": "02",
+      "description": "Propiedad, gobierno, capital, licencias y organización de tecnologías."
+    },
+    {
+      "id": "Arquitecturas y desarrollo",
+      "nav": "Arquitecturas",
+      "num": "03",
+      "description": "Cómo funcionan los sistemas y dónde aparecen sus límites y riesgos."
+    },
+    {
+      "id": "Infraestructura y poder",
+      "nav": "Infraestructura",
+      "num": "04",
+      "description": "Las condiciones materiales, laborales, territoriales y geopolíticas."
+    },
+    {
+      "id": "Evidencia y método",
+      "nav": "Método y evidencia",
+      "num": "05",
+      "description": "Cómo distinguir evidencia rigurosa, métricas y crítica situada."
+    }
+  ],
+  "entries": [
+    {
+      "id": "ec-datos",
+      "area": "Normas y derechos",
+      "title": "Ecuador · IA y protección de datos personales",
+      "summary": "Las resoluciones SPDP-SPD-2026-0009-R y 0037-R son relevantes aunque no exista una ley general de IA.",
+      "body": [
+        "La Ley Orgánica de Protección de Datos Personales y su reglamentación gobiernan tratamientos de datos en aplicaciones con IA. En febrero de 2026 la SPDP dictó una norma específica para garantizar esos derechos y la reformó en septiembre. El punto de partida no es la etiqueta «IA», sino la operación concreta de recolección, inferencia, almacenamiento, transferencia o uso de datos personales.",
+        "Una empresa que integra una API extranjera puede seguir siendo responsable de tratamientos propios. Debe determinar roles, finalidades, bases de legitimación, flujos, subencargados, transferencias internacionales, seguridad y garantías para las personas. La atribución de obligaciones exige leer la reforma atendiendo al acceso, visibilidad o control efectivo del encargado o proveedor.",
+        "Para asesorar o desarrollar producto conviene trabajar con una matriz de datos, actores, jurisdicciones y controles; no con una casilla genérica que diga «cumple con la ley de IA»."
+      ],
+      "distinctions": [
+        "Obligación legal vigente ≠ recomendación ética.",
+        "Responsable de tratamiento ≠ encargado ≠ proveedor técnico.",
+        "No alojar datos localmente ≠ no tratar datos."
+      ],
+      "critical": "La externalización de infraestructura puede desplazar operaciones pero no borra la cadena de responsabilidades ni el poder de decisión sobre los datos.",
+      "lenses": {
+        "research": "Estudiar responsabilidades distribuidas y asimetrías entre proveedores de modelos, integradores y usuarios.",
+        "lab": "Antes de evaluar un sistema, mapear datos, accesos, finalidades y documentación de decisiones.",
+        "company": "Diseñar registro de tratamientos, contratos, seguridad, avisos y evaluación de riesgos antes de lanzar un servicio."
+      },
+      "questions": [
+        "¿Quién decide las finalidades del tratamiento?",
+        "¿Qué puede ver, conservar o reutilizar el proveedor de modelos?",
+        "¿Cómo ejercen sus derechos las personas afectadas?"
+      ],
+      "sources": [
+        {
+          "label": "SPDP: resoluciones oficiales",
+          "url": "https://www.spdp.gob.ec/resoluciones/"
+        },
+        {
+          "label": "Resolución 0009-R",
+          "url": "https://www.spdp.gob.ec/wp-content/uploads/2026/08/ResolIA.pdf"
+        },
+        {
+          "label": "Reforma 0037-R",
+          "url": "https://www.spdp.gob.ec/wp-content/uploads/2026/10/SPDP-SPD-2026-0037-R.pdf"
+        }
+      ],
+      "level": 1,
+      "status": "Vigente",
+      "updated": "2026-11-10",
+      "jurisdiction": "Ecuador"
+    },
+    {
+      "id": "ec-proyectos",
+      "area": "Normas y derechos",
+      "title": "Ecuador · dos proyectos de ley que no deben confundirse",
+      "summary": "Un proyecto fue archivado el 15 de septiembre; otro, presentado en septiembre, seguía en comisión el 4 de noviembre de 2026.",
+      "body": [
+        "El Pleno de la Asamblea archivó el 15 de septiembre de 2026 el Proyecto de Ley Orgánica de Regulación y Promoción de Inteligencia Artificial. Eso no equivale a que se haya clausurado el debate regulatorio en Ecuador.",
+        "El Proyecto de Ley Orgánica para el Desarrollo, Uso Ético y Gobernanza de la Inteligencia Artificial, presentado por la asambleísta Cecilia Baltazar el 1 de septiembre, fue conocido por una comisión el 30 de septiembre; esa comisión seguía recibiendo aportes el 4 de noviembre. Hay que seguir cada expediente individualmente, sin extrapolar el estado de uno al otro.",
+        "Las reglas ya aplicables en materia de datos, consumo, propiedad intelectual, contratos y sector público no desaparecen porque un proyecto general se archive."
+      ],
+      "distinctions": [
+        "Proyecto archivado ≠ inexistencia de otros proyectos.",
+        "Discusión en comisión ≠ ley sancionada.",
+        "Fomento gubernamental ≠ autorización sin condiciones."
+      ],
+      "critical": "Una cobertura mediática que resuma «Ecuador rechazó regular la IA» omite tanto el segundo proyecto como obligaciones ya vigentes.",
+      "lenses": {
+        "research": "Construir una cronología de actores, cambios de texto y argumentos en la tramitación.",
+        "lab": "Ofrecer análisis técnico crítico cuando existan audiencias o consultas verificadas.",
+        "company": "No basar una decisión de negocio en la premisa de que no hay regulación."
+      },
+      "questions": [
+        "¿Cuáles proyectos tienen expedientes distintos?",
+        "¿Qué artículos cambian al pasar por comisión?",
+        "¿Qué obligaciones existen con independencia de la futura ley?"
+      ],
+      "sources": [
+        {
+          "label": "Asamblea: archivo del proyecto",
+          "url": "https://www.asambleanacional.gob.ec/es/noticia/119354-pleno-archiva-proyecto-de-ley-de-inteligencia"
+        },
+        {
+          "label": "Nuevo proyecto: discusión en comisión",
+          "url": "https://www.asambleanacional.gob.ec/es/noticia/119810-comision-de-educacion-conoce-propuesta-para-regular-el"
+        },
+        {
+          "label": "Asamblea: sesión del 4/11",
+          "url": "https://www.asambleanacional.gob.ec/es/node/120591"
+        }
+      ],
+      "level": 1,
+      "status": "Tramitación",
+      "updated": "2026-11-10",
+      "jurisdiction": "Ecuador"
+    },
+    {
+      "id": "eu-act",
+      "area": "Normas y derechos",
+      "title": "Unión Europea · AI Act y Omnibus",
+      "summary": "Una regulación por roles y riesgos, con obligaciones escalonadas y fechas modificadas en 2026.",
+      "body": [
+        "El AI Act combina prácticas prohibidas, reglas de transparencia, obligaciones para proveedores de modelos de propósito general (GPAI), mecanismos de supervisión y requisitos específicos de sistemas de alto riesgo. Su aplicación no es uniforme ni simultánea.",
+        "En 2026 se aprobó una modificación de simplificación. Según el calendario de la Comisión, las reglas de alto riesgo del Anexo III se desplazan al 2 de diciembre de 2027 y las asociadas a productos regulados del Anexo I al 2 de agosto de 2028. Las prohibiciones iniciales se aplican desde febrero de 2025, GPAI desde agosto de 2025 y muchas reglas de transparencia desde agosto de 2026.",
+        "Es necesario distinguir el operador que coloca un sistema en el mercado, el que lo despliega y el proveedor del modelo. La clasificación depende del uso concreto, no de una etiqueta comercial como «copiloto»."
+      ],
+      "distinctions": [
+        "Modelo de propósito general ≠ sistema de alto riesgo.",
+        "Entrada en vigor ≠ fecha de aplicación de cada obligación.",
+        "Prohibición ≠ requisito de evaluación ≠ transparencia."
+      ],
+      "critical": "No tratar el AI Act como sinónimo de «ética»: distribuye cargas de prueba, acceso a mercados y costos de cumplimiento entre actores con capacidades desiguales.",
+      "lenses": {
+        "research": "Analizar distribución global de estándares y barreras regulatorias de entrada.",
+        "lab": "Usar sus categorías como referencia comparada, no transplantarlas mecánicamente a América Latina.",
+        "company": "Construir inventario de usos y roles si se ofrece servicio a personas o entidades de la UE."
+      },
+      "questions": [
+        "¿A quién califica la norma como proveedor y desplegador?",
+        "¿Cuál es la fecha efectiva para esta función?",
+        "¿Qué documentación sería auditable por una autoridad?"
+      ],
+      "sources": [
+        {
+          "label": "Comisión Europea: AI Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        },
+        {
+          "label": "Calendario de implementación oficial",
+          "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+        }
+      ],
+      "level": 1,
+      "status": "Vigente por fases",
+      "updated": "2026-11-10",
+      "jurisdiction": "UE"
+    },
+    {
+      "id": "br-ai",
+      "area": "Normas y derechos",
+      "title": "Brasil · PL 2338/2023",
+      "summary": "El proyecto aprobado por el Senado pasó a la Cámara y no debe presentarse como ley vigente.",
+      "body": [
+        "La propuesta brasileña formula reglas de desarrollo y uso responsable de IA; afecta derechos, mecanismos de gestión de riesgos, responsabilidad y supervisión. Tiene una importancia regional particular por la escala del mercado y la circulación de proveedores y servicios.",
+        "La iniciativa fue aprobada por el Senado y remitida a la Cámara de Diputados en marzo de 2025. El expediente en Cámara permite comprobar qué comisión la examina y si hubo nuevas versiones del texto.",
+        "Para el análisis comparado conviene contrastar los sujetos obligados, la estructura de riesgos y las reglas para sector público y trabajo con el régimen europeo, no solo sus declaraciones de principios."
+      ],
+      "distinctions": [
+        "Proyecto parlamentario ≠ norma en vigor.",
+        "Texto remitido ≠ texto final.",
+        "Cobertura regional ≠ equivalencia normativa."
+      ],
+      "critical": "La importación de categorías europeas puede encarecer el cumplimiento sin garantizar capacidades institucionales de supervisión equivalentes.",
+      "lenses": {
+        "research": "Seguir sustituciones de artículos y coaliciones políticas.",
+        "lab": "Desarrollar una comparación Brasil–Ecuador–UE centrada en roles y derechos.",
+        "company": "Evaluar posibles obligaciones antes de comercializar a clientes brasileños."
+      },
+      "questions": [
+        "¿Qué cambió entre la versión del Senado y la Cámara?",
+        "¿Qué mecanismos de control institucional propone?",
+        "¿Qué sectores quedarían alcanzados?"
+      ],
+      "sources": [
+        {
+          "label": "Cámara: estado del PL 2338",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262"
+        },
+        {
+          "label": "Senado: antecedentes y texto remitido",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/157233"
+        }
+      ],
+      "level": 1,
+      "status": "Proyecto",
+      "updated": "2026-11-10",
+      "jurisdiction": "Brasil"
+    },
+    {
+      "id": "us-ai",
+      "area": "Normas y derechos",
+      "title": "Estados Unidos · capas de regulación",
+      "summary": "No existe una sola «ley federal de IA»: hay decretos, agencias, leyes estatales, contratos y litigios.",
+      "body": [
+        "El marco estadounidense se compone de actos del Ejecutivo susceptibles de modificación, normas sectoriales, agencias reguladoras, legislaciones estatales, litigios y obligaciones de los contratos. Una guía técnica federal puede orientar cumplimiento sin ser jurídicamente obligatoria por sí sola.",
+        "En una empresa transnacional hay que localizar el estado de incorporación, el domicilio y tipo de clientes, los datos tratados y los servicios ofrecidos. La jurisdicción de constitución no determina automáticamente todos los derechos aplicables.",
+        "El contraste entre regulación federal y estatal permite estudiar cómo se gobiernan mercados tecnológicos en un sistema territorialmente fragmentado."
+      ],
+      "distinctions": [
+        "Decreto ejecutivo ≠ ley del Congreso.",
+        "Guía NIST ≠ obligación legal general.",
+        "Incorporarse en Delaware ≠ estar fuera de otras jurisdicciones."
+      ],
+      "critical": "La negociación de estándares técnicos puede funcionar como regulación de facto, incluso cuando el texto no sea una ley formal.",
+      "lenses": {
+        "research": "Seguir cambios regulatorios en función de sus efectos efectivos.",
+        "lab": "Separar derecho positivo, autorregulación y estándares privados en informes.",
+        "company": "Preparar matriz por operación, cliente y jurisdicción; asesoría local ante lanzamiento."
+      },
+      "questions": [
+        "¿Qué autoridad puede sancionar en esta actividad?",
+        "¿La obligación viene de ley, contrato o política interna?",
+        "¿Qué ocurre cuando se presta servicio a otro estado?"
+      ],
+      "sources": [
+        {
+          "label": "Congress.gov: legislación federal",
+          "url": "https://www.congress.gov/"
+        },
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "level": 1,
+      "status": "Marco fragmentado",
+      "updated": "2026-11-10",
+      "jurisdiction": "EE.UU."
+    },
+    {
+      "id": "cn-ai",
+      "area": "Normas y derechos",
+      "title": "China · IA generativa, algoritmos y etiquetado",
+      "summary": "Un régimen de gobernanza centrado en servicios, seguridad de información y obligaciones de identificación.",
+      "body": [
+        "La regulación china se construye por disposiciones sobre recomendaciones algorítmicas, síntesis profunda, servicios de IA generativa y etiquetado de contenidos producidos con IA. Las obligaciones cambian según operador, servicio y público alcanzado.",
+        "Las reglas de etiquetado explícito e implícito de contenido sintético son importantes para procedencia, circulación y responsabilidad editorial. No equivalen, por sí mismas, a una garantía técnica universal de autenticidad.",
+        "El estudio de China exige leer las disposiciones normativas y diferenciar traducciones, versiones y fechas de aplicación."
+      ],
+      "distinctions": [
+        "Marcado de contenido ≠ verificación infalible.",
+        "Operador de plataforma ≠ autor individual.",
+        "Normas chinas ≠ regulación única para toda Asia."
+      ],
+      "critical": "La exigencia de identificabilidad puede reforzar responsabilidad, pero también formas de vigilancia y concentración en intermediarios que controlan el etiquetado.",
+      "lenses": {
+        "research": "Comparar la relación entre infraestructura, Estado y proveedores de servicios.",
+        "lab": "Examinar qué metadatos sobreviven en prácticas reales de circulación.",
+        "company": "Considerar reglas específicas al desplegar servicios en el mercado chino."
+      },
+      "questions": [
+        "¿Quién debe etiquetar la salida?",
+        "¿Cómo se verifican y preservan los metadatos?",
+        "¿Qué actores concentran el poder de certificación?"
+      ],
+      "sources": [
+        {
+          "label": "CAC: medidas de etiquetado",
+          "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+        }
+      ],
+      "level": 2,
+      "status": "Vigente",
+      "updated": "2026-11-10",
+      "jurisdiction": "China"
+    },
+    {
+      "id": "treaty",
+      "area": "Normas y derechos",
+      "title": "Consejo de Europa · convenio marco de IA",
+      "summary": "Instrumento internacional sobre derechos humanos, democracia y Estado de derecho: vigilar ratificaciones y alcance.",
+      "body": [
+        "El Convenio Marco del Consejo de Europa establece principios y obligaciones de los Estados firmantes dentro de su campo de aplicación. Su significado jurídico depende de las firmas, ratificaciones, entrada en vigor y opciones nacionales de implementación.",
+        "No debe presentarse como norma directamente aplicable en todos los países. Su importancia reside en la eventual convergencia entre derechos, evaluación de riesgos, mecanismos de reparación y supervisión institucional."
+      ],
+      "distinctions": [
+        "Firma ≠ ratificación.",
+        "Tratado abierto ≠ tratado vigente universalmente."
+      ],
+      "critical": "Una norma global basada en derechos puede mejorar garantías, pero su capacidad de implementación varía entre Estados.",
+      "lenses": {
+        "research": "Seguir ratificaciones e interpretaciones nacionales.",
+        "lab": "Usarlo como matriz comparativa para políticas de derechos.",
+        "company": "Considerar sus principios como estándar orientador, no sustituir obligaciones locales."
+      },
+      "questions": [
+        "¿Qué países han ratificado?",
+        "¿Qué excepciones o reservas existen?",
+        "¿Qué mecanismos de reparación se contemplan?"
+      ],
+      "sources": [
+        {
+          "label": "Consejo de Europa: convenio",
+          "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence"
+        },
+        {
+          "label": "Estado de firmas y ratificaciones",
+          "url": "https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=225"
+        }
+      ],
+      "level": 2,
+      "status": "Tratado",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "ip",
+      "area": "Normas y derechos",
+      "title": "Derechos de autor, datasets y producción con IA",
+      "summary": "Separar licencias de insumos, entrenamiento, autoría de resultados y derechos contractuales.",
+      "body": [
+        "Los problemas de propiedad intelectual se distribuyen en varios niveles: obras incorporadas al entrenamiento, datos compilados, código, pesos del modelo, salida generada y material editado por personas. La legalidad del acceso a un dataset no resuelve automáticamente la licitud de todos los usos posteriores.",
+        "La oficina estadounidense de copyright publica informes diferenciados sobre réplicas digitales, protección de resultados y uso de materiales en entrenamiento. Estos documentos no sustituyen sentencias judiciales ni el derecho de otros países.",
+        "En proyectos colaborativos, la titularidad de la investigación, el software y las marcas exige instrumentos escritos claros, sobre todo cuando participan docentes, universidades y contratistas."
+      ],
+      "distinctions": [
+        "Licencia de API ≠ propiedad del modelo.",
+        "Un output utilizable ≠ título de derecho de autor asegurado.",
+        "Registro marcario ≠ propiedad del código."
+      ],
+      "critical": "El conflicto por entrenamiento concentra disputas sobre apropiación de trabajo cultural y científico y poder contractual de plataformas.",
+      "lenses": {
+        "research": "Separar explotación económica de debate filosófico sobre creación y autoría.",
+        "lab": "Acordar licencias, atribución, repositorios y cesión antes de publicar prototipos.",
+        "company": "Documentar cadena de titularidad de código, marcas, datasets y entregables."
+      },
+      "questions": [
+        "¿Qué licencia rige cada elemento?",
+        "¿Quién puede comercializar resultados derivados?",
+        "¿Qué derechos retienen colaboradores y usuarios?"
+      ],
+      "sources": [
+        {
+          "label": "US Copyright Office: IA",
+          "url": "https://www.copyright.gov/ai/"
+        },
+        {
+          "label": "SENADI: propiedad intelectual Ecuador",
+          "url": "https://www.derechosintelectuales.gob.ec/"
+        }
+      ],
+      "level": 1,
+      "status": "Marco diverso",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "ec-strategy",
+      "area": "Normas y derechos",
+      "title": "Ecuador · estrategia, agenda y sandbox",
+      "summary": "Diferenciar política pública de una facultad operativa para experimentar o financiar tecnología.",
+      "body": [
+        "La estrategia ecuatoriana presentada en marzo de 2026 organiza gobernanza, capacidades e infraestructura y adopción/desarrollo de IA. Formula prioridades públicas; no es automáticamente una convocatoria abierta ni reemplaza la legislación existente.",
+        "Los sandboxes regulatorios requieren reglas de acceso, autoridad supervisora, duración, reportes, riesgos y criterios de salida. Anunciarlos no implica que exista una ventanilla operativa disponible para cualquier empresa.",
+        "Seguir también la Agenda Digital 2026–2030 y la transformación de objetivos generales en indicadores, presupuesto, programas y procesos administrativos."
+      ],
+      "distinctions": [
+        "Estrategia ≠ ley.",
+        "Anuncio de sandbox ≠ autorización individual.",
+        "Convenio institucional ≠ subsidio adjudicado."
+      ],
+      "critical": "Un discurso de innovación responsable debe evaluarse por capacidades públicas creadas, presupuesto, participación y mecanismos de control.",
+      "lenses": {
+        "research": "Construir observatorio de implementación real de la estrategia.",
+        "lab": "Identificar mecanismos efectivos de participación y evaluación crítica.",
+        "company": "Comprobar bases y resoluciones de cada programa antes de presupuestar ingresos."
+      },
+      "questions": [
+        "¿Hay instrumento operativo publicado?",
+        "¿Qué recursos están asignados?",
+        "¿Quién define los indicadores de éxito?"
+      ],
+      "sources": [
+        {
+          "label": "MINTEL: presentación de estrategia",
+          "url": "https://www.telecomunicaciones.gob.ec/gobierno-de-daniel-noboa-presenta-la-estrategia-para-la-inteligencia-artificial-en-ecuador/"
+        },
+        {
+          "label": "Comisión: seguimiento nov. 2026",
+          "url": "https://www.asambleanacional.gob.ec/es/node/120591"
+        }
+      ],
+      "level": 2,
+      "status": "Política pública",
+      "updated": "2026-11-10",
+      "jurisdiction": "Ecuador"
+    },
+    {
+      "id": "anthropic",
+      "area": "Gobierno y empresas",
+      "title": "Anthropic · PBC, accionistas, fundadores y Benefit Trust",
+      "summary": "Claude es un producto; Anthropic es una sociedad comercial con mecanismos de control diferenciados.",
+      "body": [
+        "Anthropic es una public benefit corporation constituida en Delaware. Ese carácter obliga a considerar simultáneamente intereses económicos, personas afectadas y beneficio público declarado; no transforma la compañía en una ONG.",
+        "Según el prospecto S-1 presentado ante la SEC en 2026, el Long-Term Benefit Trust participa mediante acciones de clase especial con facultades para elegir y remover directores de clase T, que constituyen la mayoría autorizada del directorio. El diseño también prevé instrumentos de voto reforzado de fundadores. Debe leerse la versión vigente del prospecto antes de usar porcentajes o cifras.",
+        "En octubre de 2026 la empresa anunció un fondo de beneficio público diseñado como LLC, con asignaciones de acciones sujetas a aprobación accionarial. Es una capa adicional, distinta de la compañía y del Trust."
+      ],
+      "distinctions": [
+        "PBC ≠ nonprofit.",
+        "Capital económico ≠ voto ≠ control de directorio.",
+        "Benefit Trust ≠ fondo de beneficio público.",
+        "Prospecto SEC ≠ cotización ya ejecutada."
+      ],
+      "critical": "La estructura desafía el falso binomio entre lucro e interés público, pero ningún dispositivo societario garantiza por sí mismo que la misión prevalezca ante presión de inversores.",
+      "lenses": {
+        "research": "Comparar incentivos, derechos de voto, nombramiento de directores y transparencia de resultados.",
+        "lab": "Diseñar salvaguardias de autonomía antes de negociar inversiones o patrocinios.",
+        "company": "Estudiar qué controles pueden incorporarse en estatutos y pactos, sin copiar el modelo de Delaware."
+      },
+      "questions": [
+        "¿Quién tiene derecho de nombrar directores?",
+        "¿Quién puede cambiar las cláusulas de misión?",
+        "¿Qué riesgos no resuelve la ingeniería societaria?"
+      ],
+      "sources": [
+        {
+          "label": "SEC: S-1 Anthropic",
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+        },
+        {
+          "label": "Anthropic: Public Benefit Fund",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        },
+        {
+          "label": "Long-Term Benefit Trust",
+          "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
+        }
+      ],
+      "level": 1,
+      "status": "Estructura declarada",
+      "updated": "2026-11-10",
+      "jurisdiction": "EE.UU."
+    },
+    {
+      "id": "openai",
+      "area": "Gobierno y empresas",
+      "title": "OpenAI · Foundation y Group PBC",
+      "summary": "Desde octubre de 2025 la entidad sin fines de lucro controla una corporación de beneficio público.",
+      "body": [
+        "OpenAI nació como organización sin fines de lucro y pasó por diversas configuraciones. La recapitalización anunciada el 28 de octubre de 2025 distingue OpenAI Foundation de OpenAI Group PBC.",
+        "La Foundation declara que conserva el control del Group a través de derechos especiales de gobierno y de nombramiento del directorio, y mantiene una participación accionaria convencional. La presencia de accionistas y un objeto de beneficio público no elimina conflictos entre crecimiento económico y misión.",
+        "Para evaluar el sistema hace falta separar la narrativa institucional de los derechos de control efectivos, los flujos de capital, los acuerdos estratégicos y las prácticas de supervisión."
+      ],
+      "distinctions": [
+        "Foundation ≠ totalidad de la operación comercial.",
+        "PBC ≠ empresa sin fines de lucro.",
+        "Misión declarada ≠ garantía de resultados."
+      ],
+      "critical": "Las fronteras entre misión y mercado se negocian institucionalmente: las formas de propiedad pueden habilitar o limitar la crítica y el control público.",
+      "lenses": {
+        "research": "Comparar gobierno y estructura de Anthropic y OpenAI mediante documentos originales.",
+        "lab": "Separar gobernanza de una red de investigación de la eventual sociedad comercial que venda software.",
+        "company": "Definir quién mantiene propiedad y licencia de tecnología al crecer."
+      },
+      "questions": [
+        "¿Qué derechos de control retiene la fundación?",
+        "¿Cuáles son las obligaciones de los órganos de gobierno?",
+        "¿Qué evidencia permitiría evaluar cumplimiento de la misión?"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: estructura oficial",
+          "url": "https://openai.com/es-419/our-structure/"
+        }
+      ],
+      "level": 1,
+      "status": "Estructura declarada",
+      "updated": "2026-11-10",
+      "jurisdiction": "EE.UU."
+    },
+    {
+      "id": "sas",
+      "area": "Gobierno y empresas",
+      "title": "Ecuador · constitución de una SAS tecnológica",
+      "summary": "El vehículo societario, la propiedad del software y los contratos son decisiones distintas.",
+      "body": [
+        "La Sociedad por Acciones Simplificada (SAS) ecuatoriana permite constitución electrónica a través de la Superintendencia de Compañías. El trámite oficial exige reserva de denominación, datos de accionistas y representantes, documentos habilitantes y firma electrónica, según la situación del solicitante.",
+        "Crear la persona jurídica no define por sí mismo cómo se reparten aportes, participaciones, propiedad intelectual, facultades de gestión, salidas ni exclusividad de desarrollos. Tampoco garantiza acceso a fondos, ventajas impositivas o permisos de sectores regulados.",
+        "Para un proyecto que combina investigación crítica y actividad comercial, la separación institucional puede ser una herramienta de autonomía: el laboratorio retiene su misión y acuerdos académicos, y la empresa comercializa productos bajo contratos y licencias explícitos."
+      ],
+      "distinctions": [
+        "Constitución societaria ≠ licencia de software.",
+        "Ser representante legal ≠ tener toda la propiedad.",
+        "Laboratorio académico ≠ empresa comercial automáticamente."
+      ],
+      "critical": "Una SAS simple en el papel puede concentrar el poder de hecho si no se documentan decisiones, acceso a cuentas, titulares de repositorios y salidas de socios.",
+      "lenses": {
+        "research": "Observar cómo la organización jurídica redistribuye trabajo, riesgo y valor.",
+        "lab": "Formalizar relaciones entre nodos y terceros antes de financiar prototipos.",
+        "company": "Preparar pacto de accionistas, asignación de PI, roles, facturación y protección de datos con asesoría local."
+      },
+      "questions": [
+        "¿Quién es titular del código y de la marca?",
+        "¿Qué ocurre si un fundador o desarrollador se retira?",
+        "¿Qué contratos unen laboratorio y empresa?"
+      ],
+      "sources": [
+        {
+          "label": "Manual oficial SAS",
+          "url": "https://appscvsmovil.supercias.gob.ec/guiasUsuarios/images/guias/societario/cons_sas/SAS.pdf"
+        },
+        {
+          "label": "Guía oficial del trámite",
+          "url": "https://www.gob.ec/sites/default/files/sign/procedure-SCVS-N055-20220101141414-13879049-signed.pdf"
+        }
+      ],
+      "level": 1,
+      "status": "Procedimiento",
+      "updated": "2026-11-10",
+      "jurisdiction": "Ecuador"
+    },
+    {
+      "id": "governance",
+      "area": "Gobierno y empresas",
+      "title": "PBC, fundación, asociación, trust y LLC",
+      "summary": "La arquitectura legal distribuye propiedad, voto, misión, responsabilidades y beneficios.",
+      "body": [
+        "Una corporación de beneficio público combina actividad comercial con una finalidad especial y deberes de balance. Una fundación persigue una finalidad no lucrativa bajo normas de su jurisdicción; una asociación puede responder a una lógica de miembros; una LLC y un trust son figuras jurídicas de naturaleza y reglas diferentes, no equivalentes a una PBC.",
+        "La selección no se resuelve por el nombre de la figura, sino por cinco variables: quién posee los activos, quién nombra a quienes gobiernan, quién asume obligaciones, quién recibe excedentes y qué puede hacer un disidente ante una deriva de misión.",
+        "Los ejemplos de grandes compañías de IA son útiles como estudios de gobierno corporativo, pero no se importan sin revisar derecho ecuatoriano, argentino y obligaciones fiscales."
+      ],
+      "distinctions": [
+        "Propiedad ≠ administración ≠ control.",
+        "Compromiso de misión ≠ derecho ejecutable en cualquier tribunal.",
+        "Un trust estadounidense no se traslada automáticamente a Ecuador."
+      ],
+      "critical": "La estructura societaria es una tecnología institucional: codifica posibilidades de decisión, de exclusión y de retirada.",
+      "lenses": {
+        "research": "Construir tipología de configuraciones de gobierno.",
+        "lab": "Blindar reglas de independencia editorial y científica.",
+        "company": "Delimitar licencias, conflictos de interés y reglas de decisión."
+      },
+      "questions": [
+        "¿Quién nombra y remueve autoridades?",
+        "¿Quién controla activos intangibles?",
+        "¿Qué vía de salida tiene quien discrepa?"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: trust",
+          "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
+        },
+        {
+          "label": "OpenAI: Foundation/PBC",
+          "url": "https://openai.com/our-structure/"
+        }
+      ],
+      "level": 1,
+      "status": "Marco conceptual",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "funding",
+      "area": "Gobierno y empresas",
+      "title": "Economía de una empresa de IA",
+      "summary": "Un producto con IA no es lo mismo que un fabricante de modelos fundacionales.",
+      "body": [
+        "Hay modelos económicos diferentes: laboratorio de frontera que entrena modelos, proveedor de cómputo, plataforma de inferencia, integrador de APIs, software vertical, agente especializado, empresa de datos y consultora. Cada uno combina barreras de entrada, capital, escalabilidad y dependencia distintos.",
+        "Una empresa que integra APIs debe calcular costos por token y operación, almacenamiento, reintentos, revisiones humanas, seguridad, ventas, soporte y responsabilidad frente al cliente. El margen bruto puede caer cuando una función «simple» requiere múltiples llamados o evaluaciones.",
+        "La verdadera decisión estratégica es identificar dónde se crea valor diferencial no intercambiable —datos autorizados, flujo de trabajo, diseño, confianza institucional, integración o capacidad de evaluación— y qué capa depende de terceros."
+      ],
+      "distinctions": [
+        "Facturación ≠ margen ≠ caja disponible.",
+        "Precio del modelo ≠ costo total por tarea.",
+        "Producto propio ≠ independencia de infraestructura."
+      ],
+      "critical": "La plataforma que fija precios, límites de uso y acceso al modelo conserva una palanca de poder sobre la empresa aguas abajo.",
+      "lenses": {
+        "research": "Modelar relaciones de dependencia e integración vertical.",
+        "lab": "Documentar financiamiento y conflictos de interés.",
+        "company": "Construir unit economics con escenarios de precio, latencia, fallos y rotación de proveedor."
+      },
+      "questions": [
+        "¿Cuánto cuesta una tarea resuelta, no un token?",
+        "¿Qué se rompe si el proveedor duplica precios?",
+        "¿Quién retiene el cliente y los datos?"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: prospecto financiero",
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+        },
+        {
+          "label": "Stanford: AI Index, economía",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        }
+      ],
+      "level": 1,
+      "status": "Análisis estratégico",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "contracts",
+      "area": "Gobierno y empresas",
+      "title": "Contratos, dependencia y salida tecnológica",
+      "summary": "Licencias, niveles de servicio, exportación de datos y propiedad de resultados estructuran el poder efectivo.",
+      "body": [
+        "Antes de comercializar aplicaciones de IA hay que revisar términos de uso, retención de datos, entrenamiento con datos de clientes, transferencias internacionales, gestión de incidentes, continuidad, propiedad de mejoras, auditoría, límites de responsabilidad y salida del servicio.",
+        "La portabilidad nominal de datos no garantiza reversibilidad. Puede haber dependencia de prompts, formatos, embeddings, herramientas, filtros, índices vectoriales y comportamiento de modelos. Una salida real requiere ensayar migraciones, no confiar en promesas de interoperabilidad.",
+        "El acuerdo entre laboratorio y empresa debe separar entregables comerciales, resultados públicos, publicaciones, financiamiento de investigación y derechos de terceros."
+      ],
+      "distinctions": [
+        "Exportación de datos ≠ portabilidad funcional.",
+        "Acceso a API ≠ derecho permanente a una versión.",
+        "Cláusula de salida ≠ posibilidad técnica de salida."
+      ],
+      "critical": "Los costos de retirada permiten medir poder sin reducirlo a propiedad formal.",
+      "lenses": {
+        "research": "Estudiar lock-in, costos de salida y condiciones de interoperabilidad.",
+        "lab": "Establecer políticas de publicación y contratos transparentes.",
+        "company": "Redactar y ensayar plan de reversibilidad con proveedores alternativos."
+      },
+      "questions": [
+        "¿Puede migrarse en 30 días?",
+        "¿Quién conserva información derivada?",
+        "¿Qué sucede ante una suspensión unilateral?"
+      ],
+      "sources": [
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "label": "MCP: especificación",
+          "url": "https://modelcontextprotocol.io/"
+        }
+      ],
+      "level": 1,
+      "status": "Guía práctica",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "transformer",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Transformers, modelos fundacionales y escala",
+      "summary": "Lo esencial no es memorizar marcas, sino comprender arquitectura, entrenamiento y límites.",
+      "body": [
+        "Los modelos basados en Transformers utilizan mecanismos de atención para operar sobre secuencias de representaciones. «Modelo fundacional» describe el papel de un sistema entrenado para múltiples tareas posteriores, no una arquitectura única.",
+        "Las diferencias relevantes incluyen modalidades de entrada y salida, datos y métodos de entrenamiento, longitud de contexto, ajuste posterior, técnicas de inferencia, uso de herramientas, capacidades empíricas y condiciones de acceso. Un benchmark alto no garantiza desempeño sólido en un dominio situado.",
+        "La incorporación de técnicas como mixture-of-experts, post-training especializado o sistemas de razonamiento cambia costos y comportamiento, pero no elimina incertidumbre ni dependencia de infraestructura."
+      ],
+      "distinctions": [
+        "Modelo ≠ producto.",
+        "Contexto largo ≠ memoria confiable.",
+        "Capacidad reportada ≠ competencia en cualquier contexto."
+      ],
+      "critical": "Los costos materiales del entrenamiento y la centralización de datos/cómputo condicionan quién puede desarrollar y evaluar alternativas.",
+      "lenses": {
+        "research": "Vincular opciones de diseño con relaciones de producción y acceso.",
+        "lab": "Enseñar a leer model cards y documentación de entrenamiento.",
+        "company": "Elegir capacidad suficiente para la tarea, no el modelo con marketing más llamativo."
+      },
+      "questions": [
+        "¿Qué evidencia sustenta el rendimiento?",
+        "¿Qué capacidades desaparecen al cambiar de idioma o dominio?",
+        "¿Cuánto cuesta una inferencia auditable?"
+      ],
+      "sources": [
+        {
+          "label": "Transformer original",
+          "url": "https://arxiv.org/abs/1706.03762"
+        },
+        {
+          "label": "Stanford: desempeño técnico 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/technical-performance"
+        }
+      ],
+      "level": 1,
+      "status": "Fundamento",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "inference",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Entrenamiento, inferencia y cómputo",
+      "summary": "Distinguir gasto de capital, gasto operativo y costos de ejecución por tarea.",
+      "body": [
+        "El entrenamiento ajusta parámetros mediante procesamiento masivo de datos y cómputo. La inferencia aplica el modelo a una entrada concreta; puede implicar múltiples etapas, herramientas y pasos internos. Preentrenamiento, ajuste fino y técnicas de post-training no son sinónimos.",
+        "Los costos operativos dependen de longitud de entrada/salida, cachés, tamaño del modelo, hardware, concurrencia, latencia, tasa de error y controles humanos. Una decisión aparentemente menor de producto puede multiplicar llamadas al modelo.",
+        "Comprender estos mecanismos permite discutir la economía política del cómputo con variables observables en lugar de atribuir todas las capacidades a «la IA» como abstracción."
+      ],
+      "distinctions": [
+        "Costo de entrenar ≠ costo de usar.",
+        "Token ≠ tarea resuelta.",
+        "Modelo más grande ≠ solución más eficiente."
+      ],
+      "critical": "El acceso desigual a aceleradores, energía y centros de datos condiciona qué organizaciones pueden investigar de forma autónoma.",
+      "lenses": {
+        "research": "Rastrear infraestructura y cadena de valor.",
+        "lab": "Diseñar experimentos con registro de recursos consumidos.",
+        "company": "Medir costo por operación exitosa y escenarios de escala."
+      },
+      "questions": [
+        "¿Cuántas llamadas produce una solicitud?",
+        "¿Hay alternativas más pequeñas o especializadas?",
+        "¿Qué dependencia existe del hardware/proveedor?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford: AI Index 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        },
+        {
+          "label": "AIE: energía e IA",
+          "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai"
+        }
+      ],
+      "level": 1,
+      "status": "Fundamento",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "rag",
+      "area": "Arquitecturas y desarrollo",
+      "title": "RAG, búsqueda, embeddings y evidencia",
+      "summary": "Recuperar documentos no equivale a garantizar que el modelo los interprete bien.",
+      "body": [
+        "La generación aumentada por recuperación (RAG) busca información externa, incorpora fragmentos relevantes al contexto y usa un modelo para producir una respuesta. La calidad depende de cobertura documental, indexación, chunking, recuperación, ranking, permisos y citación de fuentes.",
+        "El sistema debe resolver versionado de documentos, permisos de acceso, registros de consulta y posibilidad de abstenerse. Si un documento contiene instrucciones hostiles o incorrectas, su incorporación al contexto puede introducir riesgos de prompt injection o contaminación de la respuesta.",
+        "Una arquitectura adecuada distingue la verdad de la fuente, su actualidad, su autoridad y la incertidumbre de la interpretación."
+      ],
+      "distinctions": [
+        "Fuente recuperada ≠ fuente correcta.",
+        "Cita generada ≠ verificación de cita.",
+        "Embedding ≠ comprensión semántica garantizada."
+      ],
+      "critical": "Quien selecciona corpus, ranking y permisos controla buena parte de la visibilidad y autoridad epistémica del sistema.",
+      "lenses": {
+        "research": "Analizar mediación del conocimiento y ausencias documentales.",
+        "lab": "Evaluar trazabilidad, omisiones y calidad de evidencia.",
+        "company": "Implementar permisos por documento, citas reales y pruebas de alucinación."
+      },
+      "questions": [
+        "¿Qué documentos quedan fuera de la búsqueda?",
+        "¿El usuario puede auditar la respuesta hasta la fuente?",
+        "¿Puede la recuperación exponer datos restringidos?"
+      ],
+      "sources": [
+        {
+          "label": "NIST: guía de IA generativa",
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+        },
+        {
+          "label": "MCP: conectores de herramientas",
+          "url": "https://modelcontextprotocol.io/"
+        }
+      ],
+      "level": 1,
+      "status": "Arquitectura aplicada",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "agents",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Agentes, herramientas, permisos y control",
+      "summary": "Un agente con capacidad de acción introduce riesgos que un chatbot de consulta no tiene.",
+      "body": [
+        "Un agente combina procesamiento de contexto, selección de herramientas y ejecución de acciones sobre sistemas externos. Los efectos pueden persistir fuera del texto: cambios de archivos, mensajes enviados, compras, despliegues o alteración de bases de datos.",
+        "La evaluación exige estudiar alcance de credenciales, aislamiento de entornos, aprobaciones humanas, auditoría de acciones, reversibilidad y límites de tiempo/costo. La autonomía debe describirse por facultades concretas, no por una etiqueta binaria.",
+        "Los fallos críticos incluyen instrucciones maliciosas contenidas en fuentes externas, abuso de herramientas, filtración de datos y acciones en cadena con permisos excesivos."
+      ],
+      "distinctions": [
+        "Responder ≠ actuar.",
+        "Permiso de lectura ≠ permiso de modificación.",
+        "Humano «en el circuito» ≠ control humano efectivo."
+      ],
+      "critical": "La capacidad de actuar redistribuye la agencia entre persona, proveedor, interfaz y organizaciones que diseñan permisos.",
+      "lenses": {
+        "research": "Estudiar delegación, responsabilidad y costo de retirada.",
+        "lab": "Proponer pruebas de intervención y reversibilidad.",
+        "company": "Implementar mínimo privilegio, aprobaciones, registro de acciones y botón de parada."
+      },
+      "questions": [
+        "¿Qué puede modificar sin autorización?",
+        "¿Qué acción no es reversible?",
+        "¿Qué sucede si una fuente externa contiene instrucciones adversariales?"
+      ],
+      "sources": [
+        {
+          "label": "OWASP GenAI Top 10 2026",
+          "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+        },
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "level": 1,
+      "status": "Arquitectura aplicada",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "protocols",
+      "area": "Arquitecturas y desarrollo",
+      "title": "MCP, A2A e interoperabilidad",
+      "summary": "Los protocolos hacen posible integrar sistemas, pero no eliminan dependencia ni resuelven seguridad por sí solos.",
+      "body": [
+        "Model Context Protocol (MCP) estandariza formas de conectar aplicaciones de IA con herramientas, datos y recursos. Agent2Agent (A2A) aborda comunicación e interacción entre agentes. No cumplen exactamente la misma función.",
+        "La adopción de protocolos puede reducir integración propietaria, pero introduce nuevos riesgos: descubrimiento no autorizado, credenciales, confianza en servidores, descripción de herramientas y trazabilidad de acciones.",
+        "Una arquitectura interoperable exige probar migración de proveedor, continuidad de permisos y semántica de tareas, no solamente verificar compatibilidad de sintaxis."
+      ],
+      "distinctions": [
+        "Conexión de herramienta ≠ cooperación entre agentes.",
+        "Estándar abierto ≠ implementación segura.",
+        "Compatibilidad de protocolo ≠ portabilidad de negocio."
+      ],
+      "critical": "La gobernanza de protocolos es un espacio de poder técnico: quién decide extensiones, certificación y cambios.",
+      "lenses": {
+        "research": "Observar la estandarización como negociación sociotécnica.",
+        "lab": "Experimentar con conectores auditables y publicables.",
+        "company": "Aislar interfaces de proveedor y auditar credenciales."
+      },
+      "questions": [
+        "¿Quién mantiene el estándar?",
+        "¿Qué ocurre cuando cambia la versión?",
+        "¿Cómo se revocan permisos delegados?"
+      ],
+      "sources": [
+        {
+          "label": "MCP: especificación",
+          "url": "https://modelcontextprotocol.io/"
+        },
+        {
+          "label": "A2A: documentación",
+          "url": "https://a2a-protocol.org/"
+        }
+      ],
+      "level": 1,
+      "status": "Estándares",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "openmodels",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Open source AI, open weights y licencias",
+      "summary": "Tener pesos descargables no implica poder estudiar, modificar y redistribuir el sistema libremente.",
+      "body": [
+        "La definición de IA de código abierto 1.0 de la Open Source Initiative requiere libertades de uso, estudio, modificación y compartición, junto con información suficiente sobre datos y código para ejercer esas libertades.",
+        "En el sector existen modelos accesibles exclusivamente por API, pesos descargables bajo restricciones comerciales, implementaciones abiertas y combinaciones híbridas. Esas condiciones tienen consecuencias para reproducibilidad, costos, soberanía y continuidad.",
+        "La independencia tampoco es absoluta al disponer de pesos: hardware, datos, licencias, experiencia operativa y energía pueden seguir concentrados."
+      ],
+      "distinctions": [
+        "Open weights ≠ Open Source AI.",        "Libre acceso ≠ derecho comercial irrestricto.",
+        "Descargar pesos ≠ poder reproducir entrenamiento."
+      ],
+      "critical": "La retórica de apertura puede ocultar dependencia de infraestructura y restricciones jurídicas.",
+      "lenses": {
+        "research": "Definir una taxonomía verificable de apertura.",
+        "lab": "Documentar licencias y reproducibilidad de cada prototipo.",
+        "company": "Revisar uso comercial, redistribución y restricciones antes de integrar un modelo."
+      },
+      "questions": [
+        "¿Qué componentes están realmente disponibles?",
+        "¿La licencia permite modificar y vender?",
+        "¿Qué hardware exige despliegue independiente?"
+      ],
+      "sources": [
+        {
+          "label": "OSI: Open Source AI Definition 1.0",
+          "url": "https://opensource.org/ai/open-source-ai-definition"
+        }
+      ],
+      "level": 1,
+      "status": "Estándar conceptual",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "evals",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Evaluaciones, benchmarks y límites",
+      "summary": "Una evaluación útil examina tareas reales y distingue error, incertidumbre, costo y daño.",
+      "body": [
+        "Los benchmarks permiten comparar modelos bajo condiciones estandarizadas, pero pueden contaminarse, saturarse o medir tareas alejadas del contexto. El resultado de laboratorio no traduce automáticamente beneficio institucional o humano.",
+        "Una evaluación rigurosa fija versión del modelo, prompts, muestra, condiciones, métricas, costo, evaluadores y criterios de fracaso. En aplicaciones reales también se requiere observar variación lingüística, errores de recuperación, cambios del proveedor y efectos distributivos.",
+        "Para IA crítica, el objeto no es solo la precisión: importan explicabilidad práctica, impugnabilidad, acceso, reversibilidad y consecuencias sobre actores concretos."
+      ],
+      "distinctions": [
+        "Benchmark alto ≠ despliegue seguro.",
+        "Exactitud ≠ justicia social.",
+        "Evaluación de proveedor ≠ auditoría independiente."
+      ],
+      "critical": "Las métricas codifican una idea de éxito y pueden invisibilizar costos sociales, epistémicos y territoriales.",
+      "lenses": {
+        "research": "Examinar cómo se construyen tareas y métricas.",
+        "lab": "Crear evaluaciones situadas reproducibles con evidencia primaria.",
+        "company": "Establecer pruebas de regresión y aceptación por usuario/sector."
+      },
+      "questions": [
+        "¿Quién eligió la métrica?",
+        "¿Qué casos difíciles quedaron fuera?",
+        "¿Cuánto cuesta corregir los errores más dañinos?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford AI Index: desempeño",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/technical-performance"
+        },
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "level": 1,
+      "status": "Método",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "owasp",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Seguridad práctica: OWASP GenAI 2026",
+      "summary": "La seguridad debe diseñarse en aplicaciones y agentes, no delegarse a la «alineación» del modelo.",
+      "body": [
+        "OWASP publicó la versión 2026 de los diez riesgos principales para aplicaciones LLM y materiales para agentes. Sirve como taxonomía de amenazas, no como certificación automática de un producto.",
+        "Una aplicación puede filtrar datos, ejecutar instrucciones inyectadas en documentos, otorgar herramientas peligrosas o consumir recursos sin límites aun cuando el modelo subyacente haya superado pruebas de seguridad.",
+        "La defensa combina separación de instrucciones y datos, autorización externa al modelo, mínimo privilegio, validación de salidas, observabilidad, pruebas adversariales y respuesta a incidentes."
+      ],
+      "distinctions": [
+        "Filtrado de prompt ≠ seguridad integral.",
+        "Guardrail ≠ control de permisos.",
+        "Auditoría puntual ≠ seguridad continua."
+      ],
+      "critical": "La organización que decide permisos y controles absorbe responsabilidad que no puede transferir a un proveedor de modelos.",
+      "lenses": {
+        "research": "Vincular fallos de seguridad con arreglos organizacionales.",
+        "lab": "Construir un protocolo público de pruebas responsable.",
+        "company": "Aplicar threat modeling y revisiones continuas de agentes."
+      },
+      "questions": [
+        "¿El modelo autoriza acciones por sí solo?",
+        "¿Qué ocurre ante un documento hostil?",
+        "¿Cómo se detectan y registran incidentes?"
+      ],
+      "sources": [
+        {
+          "label": "OWASP: LLM Top 10 2026",
+          "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+        }
+      ],
+      "level": 1,
+      "status": "Estándar operativo",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "dataops",
+      "area": "Arquitecturas y desarrollo",
+      "title": "Gestión de datos, procedencia y evaluación de impacto",
+      "summary": "La calidad de un sistema depende tanto de sus corpus y flujos como de la potencia del modelo.",
+      "body": [
+        "La procedencia cubre fuentes, permisos, representatividad, calidad, actualización, versiones y transformaciones. En datos personales incorpora minimización, finalidad, acceso, retención y protección de derechos.",
+        "La evaluación de impacto debe contemplar no solo un modelo aislado, sino usuarios, instituciones, públicos afectados, cadena de proveedores y escenarios de falla. Un dataset «grande» puede reproducir asimetrías de origen, idioma y territorio.",
+        "Las fichas de datos, documentación de decisiones y registros de errores permiten supervisión y corrección posterior."
+      ],
+      "distinctions": [
+        "Cantidad de datos ≠ representatividad.",
+        "Anonimización declarada ≠ imposibilidad de reidentificar.",
+        "Documentar datos ≠ resolver injusticias de producción."
+      ],
+      "critical": "La extracción y clasificación de datos puede reproducir desigualdades del trabajo y del conocimiento en el Sur Global.",
+      "lenses": {
+        "research": "Analizar procedencia, condiciones de extracción y población ausente.",
+        "lab": "Documentar corpus, derechos y transformación de datos.",
+        "company": "Implementar gobernanza y controles de acceso desde diseño."
+      },
+      "questions": [
+        "¿De quién son los datos?",
+        "¿Qué poblaciones no aparecen?",
+        "¿Cómo se corrige una fuente y propaga ese cambio?"
+      ],
+      "sources": [
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "label": "SPDP: resoluciones",
+          "url": "https://www.spdp.gob.ec/resoluciones/"
+        }
+      ],
+      "level": 1,
+      "status": "Método",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "compute",
+      "area": "Infraestructura y poder",
+      "title": "Chips, centros de datos y dependencia material",
+      "summary": "La IA no flota en la nube: depende de energía, hardware, cadenas industriales y acuerdos de acceso.",
+      "body": [
+        "Los centros de datos, aceleradores, fabricantes de semiconductores, memorias, redes y servicios cloud participan de una cadena productiva concentrada. El entrenamiento y la inferencia requieren capacidad computacional, energía, refrigeración, financiamiento y logística.",
+        "El AI Index 2026 permite observar concentración de inversión e infraestructura. Una cadena de valor global requiere distinguir diseño de chips, fabricación, empaquetado avanzado, cloud, centros de datos e integración final.",
+        "Para América Latina, la pregunta no es solo cuántos centros de datos se instalan, sino quién decide su uso, qué capacidades científicas locales habilitan y cómo se reparten sus costos."
+      ],
+      "distinctions": [
+        "Centro de datos local ≠ soberanía de modelos.",
+        "Capacidad instalada ≠ acceso público.",
+        "Inversión privada ≠ transferencia automática de capacidades."
+      ],
+      "critical": "La dependencia se reproduce cuando los actores locales pueden comprar inferencia pero no modificar condiciones de infraestructura, licencias o decisión.",
+      "lenses": {
+        "research": "Cartografiar cadena industrial, jurisdicciones y control.",
+        "lab": "Estudiar capacidad de cómputo e investigación regional.",
+        "company": "Diversificar proveedor y calcular viabilidad local vs nube."
+      },
+      "questions": [
+        "¿Quién financia y controla el cómputo?",
+        "¿Quién paga red eléctrica y agua?",
+        "¿Qué capacidad local permanece tras la inversión?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford AI Index 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        },
+        {
+          "label": "AIE: Key Questions on Energy and AI",
+          "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai"
+        }
+      ],
+      "level": 1,
+      "status": "Análisis material",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "energy",
+      "area": "Infraestructura y poder",
+      "title": "Energía, agua y costos territoriales",
+      "summary": "Los impactos de IA no se agotan en eficiencia por consulta ni en huella global promedio.",
+      "body": [
+        "La Agencia Internacional de la Energía examina el crecimiento de inversiones y capacidad de centros de datos, su demanda eléctrica y las tensiones en redes. Las cifras requieren especificar geografía, fecha, escenario y metodología.",
+        "No es equivalente evaluar emisiones agregadas, demanda marginal de electricidad, consumo de agua, calor residual, infraestructuras de transmisión o costos para comunidades cercanas.",
+        "Una evaluación seria combina eficiencia técnica con análisis de quién soporta costos, qué alternativas existen y qué decisiones de localización son reversibles."
+      ],
+      "distinctions": [
+        "Consumo energético ≠ emisiones en toda red.",
+        "Promedio global ≠ efecto territorial.",
+        "Centro de datos nuevo ≠ beneficio comunitario neto."
+      ],
+      "critical": "La localización de infraestructuras es una decisión distributiva, no un apéndice ambiental del diseño técnico.",
+      "lenses": {
+        "research": "Vincular análisis socioambiental con economía política de infraestructura.",
+        "lab": "Construir indicadores con unidades, fuentes y contexto territorial.",
+        "company": "Incorporar costos ambientales verificables a decisiones de despliegue."
+      },
+      "questions": [
+        "¿Qué red eléctrica abastece y a qué costo?",
+        "¿Hay datos de agua y emisiones contrastables?",
+        "¿Quién decide ubicación y compensaciones?"
+      ],
+      "sources": [
+        {
+          "label": "AIE 2026: energía e IA",
+          "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+        }
+      ],
+      "level": 1,
+      "status": "Investigación aplicada",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "labor",
+      "area": "Infraestructura y poder",
+      "title": "Trabajo, exposición ocupacional y automatización",
+      "summary": "Una ocupación expuesta a IA no es una ocupación eliminada.",
+      "body": [
+        "La OIT refinó en 2025 su índice de exposición ocupacional a IA generativa con análisis por tareas, expertos y modelos. Estima gradientes diferenciados; indica exposición a capacidades técnicas, no un pronóstico mecánico de sustitución laboral.",
+        "Los efectos dependen de poder empresarial, instituciones laborales, mercado, jornada, negociación colectiva, reorganización de tareas, salarios y políticas públicas.",
+        "Para América Latina es imprescindible considerar informalidad, brechas de digitalización, género, calidad del empleo y distintas trayectorias sectoriales."
+      ],
+      "distinctions": [
+        "Exposición ≠ desplazamiento.",
+        "Productividad ≠ aumento salarial.",
+        "Automatización de tareas ≠ desaparición de profesiones."
+      ],
+      "critical": "La tecnología puede servir para intensificar trabajo, desplazar cualificaciones o fortalecer autonomía según organización y conflicto social.",
+      "lenses": {
+        "research": "Articular análisis de tareas con instituciones y estructura de clases.",
+        "lab": "Diseñar estudios situados de empleo y capacidades locales.",
+        "company": "Medir impacto laboral del propio producto y participación de trabajadores."
+      },
+      "questions": [
+        "¿Qué tareas cambian y para quién?",
+        "¿Quién captura aumentos de productividad?",
+        "¿Qué puestos o derechos se transforman sin desaparecer?"
+      ],
+      "sources": [
+        {
+          "label": "OIT: índice global refinado",
+          "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+        }
+      ],
+      "level": 1,
+      "status": "Evidencia empírica",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "sovereignty",
+      "area": "Infraestructura y poder",
+      "title": "Soberanía, colonialidad y dependencia tecnológica",
+      "summary": "No confundir soberanía con nacionalidad del proveedor o ubicación de los servidores.",
+      "body": [
+        "La soberanía tecnológica tiene dimensiones jurídicas, materiales, cognitivas, económicas e institucionales. Disponer de un servidor propio no garantiza capacidad de modificar modelos, negociar licencias, auditar datos ni decidir estándares.",
+        "Un análisis de dependencia debe identificar puntos de captura de valor: computación, middleware, APIs, plataformas, capital, datos, modelos, propiedad intelectual y distribución de clientes.",
+        "La alternativa crítica no es necesariamente replicar toda la infraestructura de frontera; puede consistir en construir capacidades situadas, cooperativas, evaluables y con opciones reales de salida."
+      ],
+      "distinctions": [
+        "Infraestructura nacional ≠ control social.",
+        "Usar software abierto ≠ soberanía total.",
+        "Innovación local ≠ distribución equitativa de beneficios."
+      ],
+      "critical": "Conviene estudiar mediaciones materiales e institucionales en lugar de reducir colonialidad a origen geográfico de empresas.",
+      "lenses": {
+        "research": "Formular indicadores de dependencia por capa y capacidad de retirada.",
+        "lab": "Desarrollar cartografías sociobiotécnicas públicas.",
+        "company": "Priorizar portabilidad y activos propios verificables."
+      },
+      "questions": [
+        "¿Qué decisiones podemos tomar sin autorización externa?",
+        "¿Cuáles son los costos reales de salir?",
+        "¿Quién retiene el valor creado en el territorio?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford AI Index 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        },
+        {
+          "label": "OSI: definición de apertura",
+          "url": "https://opensource.org/ai/open-source-ai-definition"
+        }
+      ],
+      "level": 1,
+      "status": "Marco crítico",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "platforms",
+      "area": "Infraestructura y poder",
+      "title": "Plataformas, estándares y poder privado",
+      "summary": "El gobierno de la IA opera también a través de APIs, términos, benchmarks y protocolos.",
+      "body": [
+        "La regulación efectiva de un sistema no ocurre solo mediante leyes. Proveedores fijan restricciones de acceso, condiciones de uso, filtros, precios, herramientas disponibles, interfaces y procedimientos de apelación.",
+        "Los estándares técnicos pueden ampliar cooperación o consolidar posiciones dominantes según quién los define y controla. Además, los sistemas que seleccionan o resumen información intervienen en la visibilidad pública de fuentes.",
+        "Una investigación robusta compara documentos de políticas, interfaces concretas, decisiones sobre permisos y situaciones empíricas donde se limitó o habilitó una acción."
+      ],
+      "distinctions": [
+        "Política de plataforma ≠ ley estatal.",
+        "Estándar abierto ≠ competencia perfecta.",
+        "Acceso nominal ≠ poder de negociación."
+      ],
+      "critical": "La capacidad privada de bloquear, orientar o jerarquizar acciones puede operar como una forma de poder regulatorio.",
+      "lenses": {
+        "research": "Analizar la regulación privada y las condiciones de inteligibilidad de interfaces.",
+        "lab": "Construir métodos de auditoría de visibilidad y acceso.",
+        "company": "Evitar que un único proveedor concentre clientes, inferencia y datos."
+      },
+      "questions": [
+        "¿Quién puede cambiar una política unilateralmente?",
+        "¿Cómo se apela una decisión automatizada?",
+        "¿Dónde se encuentran los costos de salir?"
+      ],
+      "sources": [
+        {
+          "label": "MCP: ecosistema y especificación",
+          "url": "https://modelcontextprotocol.io/"
+        },
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "level": 1,
+      "status": "Marco crítico",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "ai-index",
+      "area": "Evidencia y método",
+      "title": "Stanford AI Index 2026 · lectura crítica",
+      "summary": "Una base empírica central para capacidades, inversiones, incidentes y políticas, con límites de comparabilidad.",
+      "body": [
+        "El AI Index compila indicadores de investigación, desempeño, economía, medicina, educación, gobernanza y opinión pública. Ofrece series comparables y documentación metodológica; no es un oráculo sobre escenarios futuros.",
+        "Cada cifra debe leerse con su población, definición operacional, fuentes y fecha. «Adopción» no siempre equivale a uso sustantivo; «inversión» puede agrupar operaciones heterogéneas; «incidente» depende de cobertura y registro.",
+        "Un experto debería usarlo para contrastar argumentos sobre concentración, capacidades y brechas, pero no extrapolar sus métricas a un país o sector sin datos locales."
+      ],
+      "distinctions": [
+        "Indicador ≠ concepto teórico completo.",
+        "Cambio en benchmark ≠ cambio equivalente en bienestar.",
+        "Serie global ≠ evidencia local."
+      ],
+      "critical": "La capacidad de medir define qué fenómenos se vuelven visibles para gobiernos, mercados y academia.",
+      "lenses": {
+        "research": "Controlar supuestos metodológicos de cada serie citada.",
+        "lab": "Producir lecturas regionales documentadas y replicables.",
+        "company": "Usar sus tendencias como contexto, no como proyección comercial automática."
+      },
+      "questions": [
+        "¿Quién produjo cada dato?",
+        "¿Qué quedó fuera del indicador?",
+        "¿Qué hipótesis alternativas explican la tendencia?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford: AI Index 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        }
+      ],
+      "level": 1,
+      "status": "Informe anual",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "risk",
+      "area": "Evidencia y método",
+      "title": "NIST AI RMF, ISO/IEC 42001 y auditorías",
+      "summary": "Los marcos de gestión de riesgos no se sustituyen entre sí ni prueban automáticamente resultados.",
+      "body": [
+        "NIST AI Risk Management Framework proporciona un marco voluntario para organizar gobierno, mapeo, medición y gestión de riesgos; cuenta con perfil para IA generativa. ISO/IEC 42001 plantea requisitos de un sistema de gestión organizacional de IA.",
+        "Un sistema de gestión documentado puede mejorar responsabilidades y procesos, pero no garantiza que todas las decisiones sean justas, seguras o científicamente válidas. La certificación de un proceso y la evaluación del comportamiento de un modelo son objetos distintos.",
+        "La auditoría debe identificar objeto, alcance, independencia, evidencia, límites, hallazgos y vías de reparación."
+      ],
+      "distinctions": [
+        "Marco voluntario ≠ obligación legal universal.",
+        "Sistema de gestión ≠ evaluación empírica del modelo.",
+        "Sello de calidad ≠ ausencia de daño."
+      ],
+      "critical": "Los dispositivos de cumplimiento pueden transformarse en rituales si faltan mecanismos externos de impugnación y evidencia de resultados.",
+      "lenses": {
+        "research": "Analizar condiciones de producción de evidencia auditora.",
+        "lab": "Diseñar criterios que incluyan poder, derechos y contexto.",
+        "company": "Documentar gestión de riesgos sin usar certificaciones como propaganda."
+      },
+      "questions": [
+        "¿Quién define el alcance de la auditoría?",
+        "¿Puede un tercero reproducir hallazgos?",
+        "¿Qué sucede cuando aparece un daño?"
+      ],
+      "sources": [
+        {
+          "label": "NIST AI RMF",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "label": "NIST: perfil IA generativa",
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+        },
+        {
+          "label": "ISO: norma 42001",
+          "url": "https://www.iso.org/standard/81230.html"
+        }
+      ],
+      "level": 1,
+      "status": "Estándares",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "unesco",
+      "area": "Evidencia y método",
+      "title": "UNESCO · ética de IA y evaluación de impacto",
+      "summary": "La ética necesita traducción institucional y pruebas empíricas.",
+      "body": [
+        "La Recomendación de UNESCO sobre la Ética de la Inteligencia Artificial articula principios, ámbitos de política y compromisos estatales. Su valor está en conectar derechos, inclusión, medio ambiente, gobernanza de datos y diversidad cultural.",
+        "Un principio abstracto —por ejemplo, transparencia— puede concretarse como obligación de información, documentación de modelos, explicación pertinente, auditoría pública o procedimiento de apelación. No son equivalentes.",
+        "Para América Latina conviene evaluar qué capacidades, presupuesto y participación permiten convertir recomendaciones en mecanismos de intervención."
+      ],
+      "distinctions": [
+        "Recomendación internacional ≠ ley autoejecutable.",
+        "Ética declarada ≠ capacidad institucional.",
+        "Transparencia ≠ acceso irrestricto a secretos industriales."
+      ],
+      "critical": "El lenguaje ético pierde densidad si no se identifican intereses, formas de reproducción y palancas de cambio.",
+      "lenses": {
+        "research": "Investigar procesos de traducción de principios en dispositivos.",
+        "lab": "Diseñar criterios de evaluación situados y participativos.",
+        "company": "Incorporar compromisos verificables con responsable y evidencia."
+      },
+      "questions": [
+        "¿Quién participa en la evaluación?",
+        "¿Qué derecho concreto puede ejercerse?",
+        "¿Qué sanción o reparación existe ante incumplimiento?"
+      ],
+      "sources": [
+        {
+          "label": "UNESCO: Recomendación de Ética de la IA",
+          "url": "https://www.unesco.org/es/artificial-intelligence/recommendation-ethics"
+        }
+      ],
+      "level": 1,
+      "status": "Recomendación",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "metr",
+      "area": "Evidencia y método",
+      "title": "METR · aceleración de investigación con IA",
+      "summary": "Evaluación independiente de noviembre de 2026 con acceso interno y limitaciones explícitas.",
+      "body": [
+        "METR evaluó información interna de Anthropic entre agosto y octubre de 2026 y publicó un informe el 5 de noviembre. Su interpretación central sugiere que las capacidades para tareas bien especificadas podrían estar mejorando a aproximadamente el doble de su ritmo histórico, con gran incertidumbre.",
+        "El estudio subraya que Anthropic reservó la publicación de evidencia considerada relevante y que muchos indicadores admiten interpretaciones diferentes. No debe traducirse el resultado a una afirmación general de «la IA se auto-mejora autónomamente» o «duplicó toda productividad».",
+        "El caso es valioso metodológicamente: cómo auditar sistemas cuando el sujeto evaluado controla evidencia decisiva."
+      ],
+      "distinctions": [
+        "Crecimiento de métrica ≠ mejora idéntica de impacto social.",
+        "Investigación asistida ≠ investigación plenamente autónoma.",
+        "Acceso privilegiado ≠ transparencia pública completa."
+      ],
+      "critical": "Una evaluación independiente puede quedar limitada cuando la empresa conserva autoridad sobre qué evidencia sale a la luz.",
+      "lenses": {
+        "research": "Estudiar condiciones de independencia y límites de acceso.",
+        "lab": "Formular estándares de transparencia de evidencia y replicación.",
+        "company": "No prometer ROI basándose en extrapolaciones de frontera."
+      },
+      "questions": [
+        "¿Qué hallazgos fueron redactados?",
+        "¿Qué explicaciones alternativas son plausibles?",
+        "¿Cómo validar fuera del laboratorio?"
+      ],
+      "sources": [
+        {
+          "label": "METR: informe del 5 de noviembre",
+          "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+        }
+      ],
+      "level": 1,
+      "status": "Investigación reciente",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "critical-method",
+      "area": "Evidencia y método",
+      "title": "Auditoría sociobiotécnica · método LAST Lab",
+      "summary": "Conectar diseño, prácticas, instituciones y alternativas sin reducir la crítica a una lista de sesgos.",
+      "body": [
+        "Una lectura sociobiotécnica reconstruye el sistema como una red de actores humanos y no humanos, condiciones de trabajo, capital, estándares, infraestructuras, instituciones y formas de mediación. El objeto no es un modelo abstracto sino una configuración operativa.",
+        "Una auditoría madura combina genealogía de decisiones, cartografía de dependencias, examen de normas, experimentación técnica, entrevistas y análisis de impactos. Las preguntas por reversibilidad, costo de salida, voz y capacidad de modificación dan contenido práctico a la crítica.",
+        "El paso decisivo es identificar palancas de reconfiguración: métricas, interfaces, contratos, reglas de decisión, accesibilidad, licencias, posibilidades de retiro y organización del trabajo."
+      ],
+      "distinctions": [
+        "Crítica de discurso ≠ evaluación de funcionamiento.",
+        "Sesgo estadístico ≠ conjunto de desigualdades.",
+        "Alternativa declarada ≠ capacidad de intervenir materialmente."
+      ],
+      "critical": "La crítica inmanente debe mostrar cómo unas relaciones concretas reproducen restricciones y qué condiciones reales permitirían modificarlas.",
+      "lenses": {
+        "research": "Articular conceptos filosóficos con prueba empírica y comparación situada.",
+        "lab": "Convertir el marco conceptual en protocolos, instrumentos y estudios piloto.",
+        "company": "Diseñar productos evaluables, reversibles y corregibles, no solo «responsables» en el marketing."
+      },
+      "questions": [
+        "¿Qué decisiones quedaron sedimentadas en el sistema?",
+        "¿Quién puede impugnar o reconfigurar el diseño?",
+        "¿Qué cambia materialmente tras una recomendación?"
+      ],
+      "sources": [
+        {
+          "label": "LAST Lab: investigación",
+          "url": "https://lastlab.lat/es/investigacion/"
+        },
+        {
+          "label": "NIST: marco de gestión",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "level": 1,
+      "status": "Método de trabajo",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    },
+    {
+      "id": "reading-news",
+      "area": "Evidencia y método",
+      "title": "Lectura experta de noticias y anuncios de IA",
+      "summary": "Separar fecha del hecho, fecha de publicación, evidencia y relevancia para decisiones.",
+      "body": [
+        "Una noticia es útil cuando documenta un cambio de regulación, organización, capacidades, infraestructura, estructura de mercado o conocimiento verificable. Los lanzamientos comerciales no merecen prioridad por volumen de cobertura.",
+        "Para cada hecho conviene registrar fecha del evento, documento primario, tipo de evidencia, alcance, incertidumbre y consecuencias. Un prospecto bursátil no equivale a una IPO concluida; un proyecto legislativo no equivale a una ley vigente; un preprint no equivale a consenso científico.",
+        "En una institución de investigación, la curaduría agrega valor cuando muestra diferencias entre hechos e interpretaciones, y cuando vuelve explícito qué información se sigue desconociendo."
+      ],
+      "distinctions": [
+        "Comunicado empresarial ≠ verificación independiente.",
+        "Anuncio ≠ implementación.",
+        "Fecha de publicación ≠ fecha del hecho."
+      ],
+      "critical": "La sobreabundancia de titulares produce un sesgo hacia lo novedoso y mensurable que puede desplazar problemas estructurales más relevantes.",
+      "lenses": {
+        "research": "Mantener registro de evidencia y fechas.",
+        "lab": "Publicar criterios editoriales y correcciones.",
+        "company": "Tomar decisiones tras contrastar fuentes originales."
+      },
+      "questions": [
+        "¿Cuál es la fuente documental directa?",
+        "¿Qué ha cambiado efectivamente?",
+        "¿Qué dato podría falsar esta interpretación?"
+      ],
+      "sources": [
+        {
+          "label": "Stanford: AI Index 2026",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+        },
+        {
+          "label": "SEC: repositorio oficial",
+          "url": "https://www.sec.gov/edgar/search/"
+        }
+      ],
+      "level": 1,
+      "status": "Protocolo editorial",
+      "updated": "2026-11-10",
+      "jurisdiction": "Global"
+    }
+  ],
+  "briefs": [
+    {
+      "id": "n-ec",
+      "date": "2026-11-04",
+      "type": "Legislación",
+      "title": "Ecuador: continúa en comisión otro proyecto de ley de IA",
+      "desc": "La comisión especializada recibió aportes sobre el proyecto presentado en septiembre. Es distinto del proyecto archivado el 15/09.",
+      "why": "Un error de expediente puede llevar a conclusiones jurídicas opuestas. Es clave seguir el trámite nuevo junto con la normativa SPDP ya vigente.",
+      "source": "Asamblea Nacional",
+      "url": "https://www.asambleanacional.gob.ec/es/node/120591",
+      "evidence": "Actuación legislativa",
+      "topic": "ec-proyectos"
+    },
+    {
+      "id": "n-metr",
+      "date": "2026-11-05",
+      "type": "Investigación",
+      "title": "METR publica evaluación de la aceleración de I+D en Anthropic",
+      "desc": "Estimación de aproximadamente 2× en el ritmo de mejora de capacidades para tareas bien especificadas, con mucha incertidumbre y evidencia redactada.",
+      "why": "Las preguntas centrales son la capacidad de auditoría externa y el acceso a datos privados de desarrollo.",
+      "source": "METR",
+      "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+      "evidence": "Informe de evaluación",
+      "topic": "metr"
+    },
+    {
+      "id": "n-sec",
+      "date": "2026-10-26",
+      "type": "Empresas",
+      "title": "Anthropic presenta documentación para su oferta pública",
+      "desc": "El prospecto S-1 describe estructura PBC, derechos de voto, propiedad, riesgos y mecanismos del Long-Term Benefit Trust. Se trata de documentación de oferta, no de una operación ya consumada.",
+      "why": "Fuente primaria para evaluar quién decide y cómo pueden divergir las formas de propiedad y control.",
+      "source": "SEC / Anthropic",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "evidence": "Registro financiero",
+      "topic": "anthropic"
+    },
+    {
+      "id": "n-benefit",
+      "date": "2026-10-18",
+      "type": "Empresas",
+      "title": "Anthropic anuncia un Public Benefit Fund",
+      "desc": "Propuesta de asignación de participación accionaria a una LLC dedicada a fines de beneficio público, sujeta a aprobación de accionistas.",
+      "why": "Diferencia entre compromiso filantrópico, derechos corporativos y control sobre la empresa.",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "evidence": "Anuncio institucional",
+      "topic": "anthropic"
+    },
+    {
+      "id": "n-eu",
+      "date": "2026-07-27",
+      "type": "Legislación",
+      "title": "Entra en vigor la simplificación del AI Act europeo",
+      "desc": "La reforma Omnibus modifica el calendario de sistemas de alto riesgo. Las fechas específicas se consultan en el servicio oficial de la Comisión.",
+      "why": "La fecha de aplicación determina obligaciones y tiempos de preparación; no debe citarse el calendario original sin actualización.",
+      "source": "Comisión Europea",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+      "evidence": "Calendario oficial",
+      "topic": "eu-act"
+    },
+    {
+      "id": "n-owasp",
+      "date": "2026-09-01",
+      "type": "Tecnología",
+      "title": "OWASP incorpora amenazas actualizadas en LLM y agentes",
+      "desc": "Edición 2026 de los riesgos de seguridad más relevantes para aplicaciones con modelos de lenguaje.",
+      "why": "Los productos que conectan modelos con datos y herramientas necesitan controles fuera del propio modelo.",
+      "source": "OWASP",
+      "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "evidence": "Estándar comunitario",
+      "topic": "owasp"
+    }
+  ]
+};
+
+  </script>
+  <script>
+'use strict';
+(() => {
+  const data = window.LAST_ATLAS_DATA;
+  if (!data || !Array.isArray(data.entries)) return;
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
+  const html = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const unaccent = str => String(str).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const readStore = (key) => {try { const v = JSON.parse(localStorage.getItem(key)||'[]'); return Array.isArray(v) ? new Set(v) : new Set(); }catch {return new Set();}};
+  const state = {area:'all',filter:'all',lens:'research',view:'atlas',search:'',expanded:new Set(),saved:readStore('lastlab-atlas-saved-v1'),read:readStore('lastlab-atlas-read-v1'),case:'anthropic'};
+  const lensNames = {research:'Investigación',lab:'LAST Lab',company:'Empresa IA'};
+  const lensDescriptions={research:'Enfoque: preguntas académicas, evidencia y métodos de investigación.',lab:'Enfoque: instrumentos, evaluaciones y autonomía de LAST Lab.',company:'Enfoque: diseño de producto, riesgos, contratos y sostenibilidad.'};
+  const byId = new Map(data.entries.map(e=>[e.id,e]));
+  let toastTimer;
+  const saveStore=()=>{try{localStorage.setItem('lastlab-atlas-saved-v1',JSON.stringify([...state.saved]));localStorage.setItem('lastlab-atlas-read-v1',JSON.stringify([...state.read]));}catch{notify('El navegador no permite guardar el progreso.');}};
+  const notify=(msg)=>{const el=$('#toast');el.textContent=msg;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3200);};
+  const allowedUrl = (url)=>{try{const v=new URL(url);return ['https:','http:'].includes(v.protocol)?v.href:'#'}catch{return '#'}};
+  const link=(source)=>`<a class="source-link" href="${html(allowedUrl(source.url))}" target="_blank" rel="noopener noreferrer">${html(source.label)} ↗</a>`;
+  function renderNav(){
+    $('#topic-nav').innerHTML=data.sections.map(s=>`<button class="topic-link ${state.area===s.id?'active':''}" data-area="${html(s.id)}" aria-pressed="${state.area===s.id}"><span class="num">${s.num}</span><span>${html(s.nav)}</span><span class="count">${data.entries.filter(x=>x.area===s.id).length}</span></button>`).join('');
+  }
+  function updateProgress(){
+    const pct=Math.round((state.read.size/data.entries.length)*100);
+    $('#progress-percent').textContent=pct+'%';
+    $('#reading-progress').style.width=pct+'%';
+    $('#top-progress-fill').style.width=pct+'%';
+    $('#progress-label').textContent=`${state.read.size} de ${data.entries.length} temas leídos`;
+    $('#saved-count').textContent=state.saved.size;
+  }
+  function filtered(){
+    let rows=data.entries;
+    if(state.area!=='all')rows=rows.filter(x=>x.area===state.area);
+    if(state.filter==='essential')rows=rows.filter(x=>x.level===1);
+    if(state.filter==='saved')rows=rows.filter(x=>state.saved.has(x.id));
+    if(state.filter==='unread')rows=rows.filter(x=>!state.read.has(x.id));
+    if(state.search.trim()){
+      const q=unaccent(state.search.trim());
+      rows=rows.filter(x=>unaccent([x.title,x.summary,x.area,x.status,x.jurisdiction,...x.body,x.critical,...x.distinctions,...x.questions,...Object.values(x.lenses),...x.sources.map(y=>y.label)].join(' ')).includes(q));
+    }
+    return [...rows].sort((a,b)=>a.level-b.level || data.entries.indexOf(a)-data.entries.indexOf(b));
+  }
+  function detailMarkup(e){return `<div class="card-details" id="detail-${e.id}">
+    <p class="details-lead">ANÁLISIS EN PROFUNDIDAD / ${html(e.jurisdiction.toUpperCase())}</p>
+    <div class="details-body">${e.body.map(p=>`<p>${html(p)}</p>`).join('')}</div>
+    <div class="details-split">
+      <div class="detail-panel"><h4>Distinciones que importan</h4><ul>${e.distinctions.map(x=>`<li>${html(x)}</li>`).join('')}</ul></div>
+      <div class="detail-panel"><h4>Preguntas de lectura experta</h4><ul>${e.questions.map(x=>`<li>${html(x)}</li>`).join('')}</ul></div>
+    </div>
+    <div class="critical-note"><small>NÚCLEO CRÍTICO</small><p>${html(e.critical)}</p></div>
+    <div class="lens-application"><div class="lens-application-icon">✳</div><div><small>APLICACIÓN · ${html(lensNames[state.lens].toUpperCase())}</small><p>${html(e.lenses[state.lens])}</p></div></div>
+    <p class="detail-heading">Documentos y fuentes</p><div class="sources-row">${e.sources.map(link).join('')}</div>
+    <div class="card-footer"><div class="detail-actions"><button class="detail-action ${state.read.has(e.id)?'read':''}" data-read="${e.id}" aria-pressed="${state.read.has(e.id)}">${state.read.has(e.id)?'✓ Leído':'✓ Marcar como leído'}</button><button class="detail-action" data-copy="${e.id}">Copiar enlace ↗</button></div><div class="detail-footnote">Estado: ${html(e.status)} · Revisión: ${html(e.updated)}</div></div>
+  </div>`;}
+  function renderCards(){
+    const rows=filtered();
+    $('#result-count').textContent=rows.length;
+    $('#no-results').hidden=rows.length!==0;
+    $('#active-filter-label').hidden=state.area==='all';
+    $('#active-filter-label').textContent=`ÁREA ACTIVA / ${state.area.toUpperCase()} · ${rows.length} fichas`;
+    $('#cards').innerHTML=rows.map((e,i)=>{
+      const open=state.expanded.has(e.id);
+      return `<article class="knowledge-card ${open?'expanded':''}" id="tema-${e.id}">
+        <div class="card-top"><div class="card-index">${String(data.entries.indexOf(e)+1).padStart(2,'0')}</div><div class="card-main">
+          <div class="card-meta"><span class="category">${html(e.area.toUpperCase())}</span><span class="state-chip">${html(e.status)}</span></div>
+          <button class="card-title-btn" data-toggle="${e.id}" aria-expanded="${open}" aria-controls="detail-${e.id}">${html(e.title)}</button>
+          <p class="card-summary">${html(e.summary)}</p>
+        </div><div class="card-side"><span class="priority-label ${e.level===1?'bright':''}">${e.level===1?'ESENCIAL':'AMPLIACIÓN'}</span>
+          <button class="card-save ${state.saved.has(e.id)?'active':''}" aria-pressed="${state.saved.has(e.id)}" aria-label="${state.saved.has(e.id)?'Quitar de':'Guardar en'} lecturas: ${html(e.title)}" data-save="${e.id}">${state.saved.has(e.id)?'★':'☆'}</button>
+          <button class="card-save" aria-label="${open?'Cerrar':'Abrir'} ${html(e.title)}" data-toggle="${e.id}" aria-expanded="${open}" aria-controls="detail-${e.id}">${open?'−':'+'}</button>
+        </div></div>${open?detailMarkup(e):''}</article>`;
+    }).join('');
+    updateProgress();
+  }
+  function setFilter(value){state.filter=value;$$('.filter-pill').forEach(b=>{const active=b.dataset.filter===value;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});renderCards();}
+  function setLens(lens){state.lens=lens;$$('.lens-option').forEach(b=>{const active=b.dataset.lens===lens;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});$('#lens-explain').textContent=lensDescriptions[lens];renderCards();}
+  function setArea(area){state.area=area;renderNav();renderCards();setView('atlas',false);document.getElementById('explorar').scrollIntoView({behavior:'smooth',block:'start'});}
+  function setView(view,scroll=true){
+    state.view=view;
+    $$('.view-section').forEach(s=>s.hidden=s.id!==`view-${view}`);
+    $$('.nav-link').forEach(n=>{const active=n.dataset.view===view;n.classList.toggle('active',active);if(active)n.setAttribute('aria-current','page');else n.removeAttribute('aria-current');});
+    if(scroll)window.scrollTo({top:0,behavior:'smooth'});
+    document.title=({atlas:'Atlas de IA',poder:'Mapa de poder',actualidad:'Actualidad curada',metodo:'Método de lectura'})[view]+' — LASTLab';
+  }
+  function openTopic(id){
+    if(!byId.has(id))return;
+    state.area='all';state.filter='all';state.search='';$('#search').value='';state.expanded.add(id);
+    renderNav();setFilter('all');setView('atlas',false);
+    window.setTimeout(()=>{const node=document.getElementById('tema-'+id);node?.scrollIntoView({behavior:'smooth',block:'start'});},30);
+  }
+  function copyText(str){
+    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(str).then(()=>notify('Copiado al portapapeles')).catch(()=>fallbackCopy(str));}else fallbackCopy(str);
+  }
+  function fallbackCopy(s){const t=document.createElement('textarea');t.value=s;document.body.appendChild(t);t.select();try{document.execCommand('copy');notify('Copiado al portapapeles')}catch{notify('No se pudo copiar: navegador sin permisos')}t.remove();}
+  function download(name,mime,text){const file=new Blob([text],{type:mime});const url=URL.createObjectURL(file);const a=document.createElement('a');a.href=url;a.download=name;a.click();window.setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Archivo preparado para descargar');}
+  function exportRoute(){
+    const selected=data.entries.filter(e=>state.saved.has(e.id)||state.read.has(e.id));
+    const rows=selected.length?selected:data.entries.filter(e=>e.level===1);
+    const doc=['# LASTLab · Mi ruta por el Atlas de IA','',`Corte editorial: ${data.asOf}. Exportación local de ${new Date().toISOString().slice(0,10)}.`, '','Este material es una guía de lectura; verificar vigencia de normas y fuentes.','',...rows.flatMap(e=>[`## ${e.title}`,`**Área:** ${e.area} · **Estado:** ${e.status} · **Leído:** ${state.read.has(e.id)?'Sí':'No'} · **Guardado:** ${state.saved.has(e.id)?'Sí':'No'}`,'',e.summary,'',...e.questions.map(q=>'- '+q),'',...e.sources.map(s=>`- ${s.label}: ${s.url}`),''])];
+    download('lastlab-atlas-mi-ruta.md','text/markdown;charset=utf-8',doc.join('\n'));
+  }
+  function exportSources(){const records=data.entries.flatMap(e=>e.sources.map(s=>[e.area,e.title,e.status,s.label,s.url]));const csv=[['Área','Tema','Estado','Fuente','URL'],...records].map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n');download('lastlab-atlas-fuentes.csv','text/csv;charset=utf-8','\ufeff'+csv);}
+  function setCompany(caseId){
+    state.case=caseId;
+    $$('.case-pill').forEach(b=>{const yes=b.dataset.case===caseId;b.classList.toggle('active',yes);b.setAttribute('aria-pressed',String(yes));});
+    const anthropic=caseId==='anthropic';
+    const nodes=anthropic?
+      [{label:'FIGURA JURÍDICA',title:'Anthropic PBC',desc:'Sociedad comercial de beneficio público incorporada en Delaware.'},{label:'GOBIERNO',title:'Long-Term Benefit Trust',desc:'Facultades especiales sobre directores de clase T; además hay otras formas de voto.'},{label:'CAPITAL Y MISIÓN',title:'Accionistas + Benefit Fund',desc:'Participación económica y un fondo LLC anunciado sujeto a condiciones.'}]:
+      [{label:'MISIÓN Y CONTROL',title:'OpenAI Foundation',desc:'Entidad sin fines de lucro con derechos especiales de gobierno.'},{label:'GOBIERNO',title:'Nombramiento del directorio',desc:'La Foundation designa el directorio de la entidad comercial.'},{label:'OPERACIÓN',title:'OpenAI Group PBC',desc:'Corporación comercial de beneficio público, con accionistas.'}];
+    const text=anthropic?'El Long-Term Benefit Trust y las clases de acciones separan poderes de designación de directores de otros derechos económicos y de voto. El Public Benefit Fund anunciado en octubre de 2026 es otra entidad con una función distinta. La estructura debe examinarse en el prospecto oficial actualizado.':'La recapitalización anunciada en octubre de 2025 separa OpenAI Foundation y OpenAI Group PBC. La fundación declara conservar el control por derechos especiales de nombramiento del directorio y mantiene participación accionaria. Los instrumentos jurídicos y la operación comercial deben evaluarse por separado.';
+    const question=anthropic?'¿Puede una institución protectora de la misión influir sin tener derechos económicos ordinarios?':'¿Cómo se equilibra control de una fundación con capital comercial y acuerdos estratégicos?';
+    const sources=anthropic?[{label:'Prospecto SEC',url:'https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm'},{label:'Public Benefit Fund',url:'https://www.anthropic.com/news/public-benefit-fund'}]:[{label:'OpenAI: estructura oficial',url:'https://openai.com/es-419/our-structure/'}];
+    $('#case-content').innerHTML=`<div class="case-board"><div class="case-board-header"><div><h2>${anthropic?'Anthropic · Claude':'OpenAI · ChatGPT'}</h2><p>Lectura esquemática de relaciones corporativas; no organigrama jurídico exhaustivo</p></div><div class="case-type">${anthropic?'PUBLIC BENEFIT CORPORATION · 2026':'FOUNDATION + GROUP PBC · 2025'}</div></div>
+    <div class="company-diagram">${nodes.map((n,i)=>`${i?'<div class="diagram-arrow" aria-hidden="true">→</div>':''}<div class="diagram-node"><span>${n.label}</span><strong>${n.title}</strong><p>${n.desc}</p></div>`).join('')}</div>
+    <div class="case-explainer"><div><h3>Qué mirar detrás de la estructura</h3><p>${text}</p><div class="case-sources">${sources.map(link).join('')}</div></div><div class="case-questions"><strong>PREGUNTA PARA LA INVESTIGACIÓN</strong><p>${question}</p><p>Analizar siempre: propiedad económica, nombramientos, veto, informes de cumplimiento y posibilidad de salida.</p></div></div></div>`;
+  }
+  function renderNews(){
+    $('#news-count').textContent=`${data.briefs.length.toString().padStart(2,'0')} entradas`;
+    $('#news-list').innerHTML=[...data.briefs].sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<article class="news-item"><time class="news-date" datetime="${html(x.date)}">${new Date(x.date+'T12:00:00').toLocaleDateString('es-EC',{day:'2-digit',month:'short',year:'numeric'})}</time><div class="news-content"><small>${html(x.type.toUpperCase())} · ${html(x.evidence.toUpperCase())}</small><h3>${html(x.title)}</h3><p>${html(x.desc)}</p><p class="news-why"><strong>Por qué importa.</strong> ${html(x.why)}</p><div class="news-links"><a href="${html(allowedUrl(x.url))}" target="_blank" rel="noopener noreferrer">Fuente original: ${html(x.source)} ↗</a><button data-news-topic="${html(x.topic)}">Ver tema en el atlas ↗</button></div></div></article>`).join('');
+  }
+  function bindEvents(){
+    document.addEventListener('click',e=>{
+      const b=e.target.closest('button');if(!b)return;
+      if(b.matches('.nav-link')){setView(b.dataset.view);return;}
+      if(b.matches('.topic-link')){setArea(b.dataset.area);return;}
+      if(b.matches('.filter-pill')){setFilter(b.dataset.filter);return;}
+      if(b.matches('.lens-option')){setLens(b.dataset.lens);return;}
+      if(b.matches('[data-toggle]')){const id=b.dataset.toggle;state.expanded.has(id)?state.expanded.delete(id):state.expanded.add(id);renderCards();return;}
+      if(b.matches('[data-save]')){const id=b.dataset.save;state.saved.has(id)?state.saved.delete(id):state.saved.add(id);saveStore();renderCards();notify(state.saved.has(id)?'Tema guardado':'Tema quitado de guardados');return;}
+      if(b.matches('[data-read]')){const id=b.dataset.read;state.read.has(id)?state.read.delete(id):state.read.add(id);saveStore();renderCards();notify(state.read.has(id)?'Tema marcado como leído':'Lectura marcada como pendiente');return;}
+      if(b.matches('[data-copy]')){const path=window.location.href.split('#')[0];copyText(path+'#tema/'+b.dataset.copy);return;}
+      if(b.matches('[data-case]')){setCompany(b.dataset.case);return;}
+      if(b.matches('[data-news-topic]')){openTopic(b.dataset.newsTopic);return;}
+    });
+    $('#search').addEventListener('input',e=>{state.search=e.target.value;renderCards()});
+    $('#jump-essential').addEventListener('click',()=>{setFilter('essential');$('#explorar').scrollIntoView({behavior:'smooth'})});
+    $('#reset-filter').addEventListener('click',()=>{state.search='';state.area='all';$('#search').value='';renderNav();setFilter('all')});
+    $('#download-notes').addEventListener('click',exportRoute);
+    $('#download-sources').addEventListener('click',exportSources);
+    $('#view-sas').addEventListener('click',()=>openTopic('sas'));
+    $('#copy-method').addEventListener('click',()=>copyText(['PROTOCOLO DE LECTURA CRÍTICA DE IA','1. ¿Cuál es el objeto concreto, su versión y alcance?','2. ¿Dónde está la fuente primaria y qué evidencia permite comprobar?','3. ¿Qué es hecho, anuncio, propuesta, obligación o hipótesis?','4. ¿Quién financia, decide, controla, trabaja y asume riesgos?','5. ¿Cuáles son los límites, explicaciones alternativas y costos de salida?','6. ¿Qué cambio institucional, técnico o de investigación se justifica?'].join('\n')));
+    document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();setView('atlas',false);$('#search').focus()}if(e.key==='Escape'&&document.activeElement===$('#search')){$('#search').blur();}});
+  }
+  function init(){renderNav();renderCards();renderNews();setCompany('anthropic');bindEvents();$('#stat-total').textContent=data.entries.length;const fragment=decodeURIComponent(location.hash.slice(1));if(fragment.startsWith('tema/'))openTopic(fragment.split('/')[1]);}
+  init();
+})();
+
+  </script>
+</body>
+</html>
